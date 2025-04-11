@@ -8,7 +8,8 @@ const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const currentYear = new Date().getFullYear();
-  const yearsOfOperation = currentYear - 2021; // Started 4 years ago from 2025
+  // Using fixed value of 15+ years instead of calculating
+  const yearsOfOperation = 15; // Fixed value for years of operation
 
   useEffect(() => {
     const observer = new IntersectionObserver(

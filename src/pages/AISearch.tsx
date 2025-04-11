@@ -18,7 +18,7 @@ const AISearch = () => {
       <Navbar />
       <main className="flex-1 pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <h1 className="text-3xl font-bold mb-8 text-center">Golden Gate AI Search Tools</h1>
+          <h1 className="text-3xl font-bold mb-8 text-center">Golden Resources</h1>
 
           <div className="mb-8">
             <p className="text-lg text-center max-w-2xl mx-auto">
