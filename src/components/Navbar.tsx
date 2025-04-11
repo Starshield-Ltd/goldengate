@@ -54,7 +54,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           <Link to="/" className="nav-link">Home</Link>
-          <a href="#ai-education" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('ai-education')?.scrollIntoView({ behavior: 'smooth' }); }}>AI Education</a>
           <a href="#about" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About</a>
           <a href="#gallery" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
           <Link to="/ghanaian-education" className="nav-link">Education</Link>
@@ -103,17 +102,6 @@ const Navbar = () => {
           >
             Home
           </Link>
-          <a
-            href="#ai-education"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('ai-education')?.scrollIntoView({ behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}
-          >
-            AI Education
-          </a>
           <a
             href="#about"
             className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"

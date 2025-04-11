@@ -17,7 +17,7 @@ const Index = () => {
       <Navbar />
       <main className="w-full">
         <Hero />
-        <AIInEducation />
+
         <div className="bg-gradient-to-b from-white to-gray-50">
           <About />
           <SchoolEnvironmentGallery />
