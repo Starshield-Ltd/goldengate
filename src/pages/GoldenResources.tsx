@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Splite from '@/components/Splite';
@@ -7,8 +7,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BookOpen, GraduationCap, BookMarked, Globe, Headphones, FileText } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ResourceModal from '@/components/ResourceModal';
 
 const GoldenResources = () => {
+  const [selectedResource, setSelectedResource] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const resources = [
     {
       id: 'bece',
@@ -139,10 +142,14 @@ const GoldenResources = () => {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <Button asChild className="w-full bg-gradient-to-r from-school-blue to-school-yellow hover:from-school-blue/90 hover:to-school-yellow/90">
-                        <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Access Resource
-                        </a>
+                      <Button
+                        className="w-full bg-gradient-to-r from-school-blue to-school-yellow hover:from-school-blue/90 hover:to-school-yellow/90"
+                        onClick={() => {
+                          setSelectedResource(resource.url);
+                          setIsModalOpen(true);
+                        }}
+                      >
+                        Access Resource
                       </Button>
                     </CardFooter>
                   </Card>
@@ -172,6 +179,14 @@ const GoldenResources = () => {
         </div>
       </main>
       <Footer />
+
+      {/* Resource Modal */}
+      <ResourceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        url={selectedResource || ''}
+        title="Golden Gate Educational Resource"
+      />
     </div>
   );
 };
