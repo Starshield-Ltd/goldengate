@@ -75,6 +75,9 @@ const Footer = () => {
                 <Link to="/ghanaian-education" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Education</Link>
               </li>
               <li>
+                <Link to="/stem-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">STEM Resources</Link>
+              </li>
+              <li>
                 <Link to="/ai-search" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">AI Search</Link>
               </li>
               <li>

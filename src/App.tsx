@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import GhanaianEducation from "./pages/GhanaianEducation";
+import StemResources from "./pages/StemResources";
 import AISearch from "./pages/AISearch";
 import IndexGlobe from "./pages/AISearchTools/IndexGlobe";
 import Farfalle from "./pages/AISearchTools/Farfalle";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/ghanaian-education" element={<GhanaianEducation />} />
+          <Route path="/stem-resources" element={<StemResources />} />
           <Route path="/ai-search" element={<AISearch />} />
           <Route path="/ai-search/index-globe" element={<IndexGlobe />} />
           <Route path="/ai-search/farfalle" element={<Farfalle />} />
