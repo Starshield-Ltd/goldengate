@@ -9,6 +9,7 @@ import SchoolEnvironmentGallery from "@/components/SchoolEnvironmentGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollButton from "@/components/ScrollButton";
 import ScrollToTop from "@/components/ScrollToTop";
+import AIInEducation from "@/components/AIInEducation";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Navbar />
       <main className="w-full">
         <Hero />
+        <AIInEducation />
         <div className="bg-gradient-to-b from-white to-gray-50">
           <About />
           <SchoolEnvironmentGallery />
