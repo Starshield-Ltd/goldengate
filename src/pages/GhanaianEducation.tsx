@@ -149,7 +149,7 @@ const GhanaianEducation = () => {
             </section>
 
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Educational Resources</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Golden Resources</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
                 For more information about the Ghanaian education system, you can visit:
               </p>

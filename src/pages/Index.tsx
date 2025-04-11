@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import TraditionalDayGallery from "@/components/TraditionalDayGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollButton from "@/components/ScrollButton";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <About />
         <Gallery />
+        <TraditionalDayGallery />
         <Contact />
       </main>
       <WhatsAppButton phoneNumber="0246186629" />

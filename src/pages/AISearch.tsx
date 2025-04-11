@@ -18,15 +18,15 @@ const AISearch = () => {
       <Navbar />
       <main className="flex-1 pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <h1 className="text-3xl font-bold mb-8 text-center">SAA AI Search Tools</h1>
-          
+          <h1 className="text-3xl font-bold mb-8 text-center">Golden Gate AI Search Tools</h1>
+
           <div className="mb-8">
             <p className="text-lg text-center max-w-2xl mx-auto">
-              Explore these cutting-edge AI search tools to enhance your research and learning experience. 
+              Explore these cutting-edge AI search tools to enhance your research and learning experience.
               These tools can help students, teachers, and parents find information more efficiently.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {tools.map((tool) => (
               <Link
@@ -51,7 +51,7 @@ const AISearch = () => {
               </Link>
             ))}
           </div>
-          
+
           <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
             <h2 className="text-xl font-semibold mb-4">How AI Search Tools Can Help Education</h2>
             <ul className="space-y-2 text-gray-700">

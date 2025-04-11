@@ -156,9 +156,17 @@ const About = () => {
                   <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
                   <p className="text-white">Primary</p>
                 </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 col-span-2 border border-school-yellow/20">
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
                   <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">Junior High School (Coming Soon)</p>
+                  <p className="text-white">JHS 1</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white">JHS 2</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white">JHS 3</p>
                 </div>
               </div>
             </div>
