@@ -98,12 +98,16 @@ const About = () => {
             {/* Zaha Hadid inspired curved container */}
             <div className="relative">
               <div className="absolute -top-5 -left-5 right-5 bottom-5 bg-gradient-to-tr from-school-blue/40 to-school-yellow/40 rounded-[70px_30px_50px_20px] transform rotate-6 backdrop-blur-sm border border-school-yellow/30"></div>
-              <div className="rounded-2xl overflow-hidden shadow-lg relative z-10">
-                <ImageWithLoader
-                  src="https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2017.14.29_bb8cad6f.jpg?updatedAt=1742906297714"
-                  alt="Golden Gate Int. School Students"
-                  className="w-full h-full object-cover aspect-[4/3]"
-                />
+              <div className="rounded-2xl overflow-hidden shadow-lg relative z-10 bg-white">
+                <div className="absolute inset-0 bg-white z-10"></div>
+                <div className="absolute inset-0 z-20 p-4">
+                  <ImageWithLoader
+                    src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.23.05_5d28653d.jpg?updatedAt=1744390971018"
+                    alt="Golden Gate Int. School Students"
+                    className="w-full h-full object-contain aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+                    containerClassName="w-full h-full"
+                  />
+                </div>
               </div>
             </div>
 

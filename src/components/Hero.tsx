@@ -22,8 +22,8 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <ImageWithLoader
-          src="https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2018.12.33_79e96afc.jpg?updatedAt=1742906298307"
-          alt="School Children"
+          src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.14_41d6b5c5.jpg?updatedAt=1744390976920"
+          alt="Golden Gate Int. School Students"
           className="w-full h-full object-contain md:object-cover"
           priority
         />
@@ -88,12 +88,16 @@ const Hero = () => {
             {/* Modern curved element */}
             <div className="absolute -top-10 -left-10 right-10 bottom-10 bg-gradient-to-br from-school-blue/30 to-school-yellow/30 rounded-[60px_20px_50px_30px] -rotate-6 backdrop-blur-sm"></div>
 
-            <div className="glass-gradient rounded-3xl overflow-hidden shadow-2xl rotate-3 transform hover:rotate-0 transition-all duration-500 z-10 relative border-2 border-white/30">
-              <ImageWithLoader
-                src="https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2018.12.27_964ef960.jpg?updatedAt=1742906298570"
-                alt="Golden Gate Int. School Students"
-                className="w-full h-full object-cover aspect-[4/3]"
-              />
+            <div className="glass-gradient rounded-3xl overflow-hidden shadow-2xl rotate-3 transform hover:rotate-0 transition-all duration-500 z-10 relative border-2 border-white/30 bg-white">
+              <div className="absolute inset-0 bg-white z-10"></div>
+              <div className="absolute inset-0 z-20 p-4">
+                <ImageWithLoader
+                  src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.15_e6ce72f4.jpg?updatedAt=1744390971166"
+                  alt="Golden Gate Int. School Students"
+                  className="w-full h-full object-contain aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+                  containerClassName="w-full h-full"
+                />
+              </div>
             </div>
             <div className="absolute -bottom-6 -left-6 glass-dark rounded-2xl overflow-hidden shadow-2xl -rotate-3 transform hover:rotate-0 transition-all duration-500 w-48 h-48 z-20 border-2 border-school-yellow">
               <div className="p-4 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/90 to-school-blue/80 h-full flex flex-col justify-center items-center">

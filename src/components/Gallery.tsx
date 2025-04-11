@@ -13,21 +13,21 @@ interface GalleryItem {
 const Gallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const galleryImages: GalleryItem[] = [
     {
       id: 1,
-      src: "https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2018.12.27_964ef960.jpg?updatedAt=1742906298570",
-      alt: "Happy students at Serwaa Akoto Academy"
+      src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.14_41d6b5c5.jpg?updatedAt=1744390976920",
+      alt: "Happy students at Golden Gate Int. School"
     },
     {
       id: 2,
-      src: "https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2018.12.33_79e96afc.jpg?updatedAt=1742906298307",
+      src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.15_e6ce72f4.jpg?updatedAt=1744390971166",
       alt: "Students learning together"
     },
     {
       id: 3,
-      src: "https://ik.imagekit.io/humbling/creche/WhatsApp%20Image%202025-03-21%20at%2017.14.29_bb8cad6f.jpg?updatedAt=1742906297714",
+      src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.13_a7999d6e.jpg?updatedAt=1744390982171",
       alt: "Students engaged in activities"
     }
   ];
@@ -59,8 +59,8 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section 
-      id="gallery" 
+    <section
+      id="gallery"
       ref={sectionRef}
       className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden relative"
     >
@@ -69,7 +69,7 @@ const Gallery = () => {
         {/* Zaha Hadid inspired curved elements */}
         <div className="absolute top-0 right-0 w-1/3 h-40 bg-gradient-to-l from-school-seaBlue/10 to-transparent rounded-bl-[80px]"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-40 bg-gradient-to-r from-school-yellow/10 to-transparent rounded-tr-[80px]"></div>
-        
+
         {/* Paint splatters */}
         <svg className="absolute top-1/4 left-10 w-28 h-28 text-school-green/15" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="40" fill="currentColor" />
@@ -77,7 +77,7 @@ const Gallery = () => {
           <circle cx="70" cy="30" r="15" fill="currentColor" />
           <circle cx="75" cy="60" r="12" fill="currentColor" />
         </svg>
-        
+
         {/* Book scribbles */}
         <svg className="absolute bottom-1/4 right-10 w-32 h-32 text-school-yellow/15" viewBox="0 0 100 100">
           <rect x="20" y="20" width="60" height="70" rx="2" fill="currentColor" />
@@ -105,19 +105,19 @@ const Gallery = () => {
             "text-gray-600 transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
-            Take a glimpse into the joyful learning environment at Serwaa Akoto Academy,
+            Take a glimpse into the joyful learning environment at Golden Gate Int. School,
             where our students thrive in a nurturing and stimulating atmosphere.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
-            <div 
+            <div
               key={image.id}
               className={cn(
                 "group overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-all duration-500 aspect-[3/4]",
-                isVisible 
-                  ? "opacity-100 translate-y-0" 
+                isVisible
+                  ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20",
                 isVisible && `transition-all duration-700 delay-${(index + 1) * 100}`
               )}
@@ -125,33 +125,35 @@ const Gallery = () => {
               <div className="relative h-full overflow-hidden">
                 {/* Zaha Hadid inspired frame */}
                 <div className="absolute -inset-1 bg-gradient-to-br from-school-seaBlue/30 via-school-yellow/20 to-school-green/30 rounded-[30px_20px_40px_25px] transform rotate-3 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                
-                <div className="glass h-full relative z-10">
-                  <ImageWithLoader
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-sm font-medium">{image.alt}</p>
-                    </div>
+
+                <div className="glass h-full relative z-10 bg-white">
+                  <div className="absolute inset-0 bg-white z-10"></div>
+                  <div className="absolute inset-0 z-20 p-4">
+                    <ImageWithLoader
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      containerClassName="w-full h-full"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30">
+                    <p className="text-white font-medium drop-shadow-md">{image.alt}</p>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className={cn(
           "mt-16 text-center transition-all duration-700 delay-600",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
           <p className="text-gray-700 mb-6">
-            Experience the vibrant community and educational excellence at Serwaa Akoto Academy.
+            Experience the vibrant community and educational excellence at Golden Gate Int. School.
           </p>
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             className="btn-primary inline-flex items-center gap-2 bg-gradient-to-r from-school-seaBlue to-school-green text-white hover:from-school-seaBlue/90 hover:to-school-green/90"
           >
             Contact Us for a Visit
