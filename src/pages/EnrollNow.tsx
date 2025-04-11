@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const EnrollNow = () => {
   const [formData, setFormData] = useState({
@@ -25,8 +27,10 @@ const EnrollNow = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1 pt-24 pb-12 bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-indigo-900 mb-8">Begin Your Journey</h1>
         <div className="bg-white shadow-xl rounded-2xl p-8 space-y-6 border border-indigo-100">
           <p className="text-gray-600 text-lg text-center mb-8">
@@ -106,6 +110,8 @@ const EnrollNow = () => {
           </form>
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -78,7 +78,7 @@ const Footer = () => {
                 <Link to="/ai-search" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">AI Search</Link>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Contact</a>
+                <a href="#contact" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
               </li>
               <li>
                 <a href="#contact" className="fixed bottom-8 right-8 w-12 h-12 rounded-full backdrop-blur-sm bg-gradient-to-r from-school-blue/70 to-school-yellow/70 border border-white/20 flex items-center justify-center group hover:scale-110 transition-all duration-300 shadow-lg" onClick={(e) => {
@@ -112,19 +112,22 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-4 font-heading drop-shadow-md">Programs</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Creche</Link>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Creche</a>
               </li>
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Nursery</Link>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Nursery</a>
               </li>
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Kindergarten</Link>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Kindergarten</a>
               </li>
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Primary Education</Link>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Primary Education</a>
               </li>
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Junior High School</Link>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Junior High School</a>
+              </li>
+              <li>
+                <Link to="/enroll-now" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Enroll Now</Link>
               </li>
             </ul>
           </div>
