@@ -16,13 +16,13 @@ const StemResources = () => {
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Empowering the next generation of scientists, technologists, engineers, and mathematicians</p>
 
           <Splite
-            title="STEM Resources For EDISAM-Kids"
+            title="STEM Resources For GOGAINS Kids"
             subtitle="Building Future Innovators"
-            description="At EDISAM-Kids, we believe in providing comprehensive STEM education that prepares students for the challenges and opportunities of tomorrow's world."
+            description="At Golden Gate Int. School (GOGAINS), we believe in providing comprehensive STEM education that prepares students for the challenges and opportunities of tomorrow's world."
           >
             <div className="rounded-xl overflow-hidden shadow-lg">
               <ImageWithLoader
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1422&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1529061183275-1bf58c8e9cf3?q=80&w=1374&auto=format&fit=crop"
                 alt="STEM Education"
                 className="w-full h-64 object-cover"
               />
@@ -39,6 +39,14 @@ const StemResources = () => {
                 STEM stands for Science, Technology, Engineering, and Mathematics. It is an educational approach that integrates these four disciplines to promote critical thinking, problem-solving, and innovation skills among students.
               </p>
             </section>
+
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <ImageWithLoader
+                src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1470&auto=format&fit=crop"
+                alt="Black students learning STEM"
+                className="w-full h-64 object-cover"
+              />
+            </div>
 
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-blue flex items-center">
@@ -73,12 +81,28 @@ const StemResources = () => {
               </p>
             </section>
 
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <ImageWithLoader
+                src="https://images.unsplash.com/photo-1576485375217-d6a95e34d043?q=80&w=1470&auto=format&fit=crop"
+                alt="Ghana Education"
+                className="w-full h-40 object-cover"
+              />
+            </div>
+
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <ImageWithLoader
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1532&auto=format&fit=crop"
+                alt="Black students in science class"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-6 text-school-blue flex items-center">
                 <BookOpen className="w-6 h-6 mr-2 text-school-yellow" />
                 STEM Resources Directory
               </h2>
-              
+
               <Tabs defaultValue="websites" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-6 bg-gray-100">
                   <TabsTrigger value="websites" className="flex items-center">
@@ -98,7 +122,7 @@ const StemResources = () => {
                     <span>Books & Learning</span>
                   </TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="websites" className="space-y-4">
                   <h3 className="text-xl font-semibold text-school-blue">Cool STEM Websites</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
@@ -119,7 +143,7 @@ const StemResources = () => {
                     </li>
                   </ul>
                 </TabsContent>
-                
+
                 <TabsContent value="apps" className="space-y-4">
                   <h3 className="text-xl font-semibold text-school-blue">Science Games and Apps</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
@@ -140,7 +164,7 @@ const StemResources = () => {
                     </li>
                   </ul>
                 </TabsContent>
-                
+
                 <TabsContent value="camps" className="space-y-4">
                   <h3 className="text-xl font-semibold text-school-blue">STEM Camps and Programs</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
@@ -158,7 +182,7 @@ const StemResources = () => {
                     </li>
                   </ul>
                 </TabsContent>
-                
+
                 <TabsContent value="books" className="space-y-4">
                   <h3 className="text-xl font-semibold text-school-blue">Books</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
@@ -185,7 +209,7 @@ const StemResources = () => {
                 Join Our STEM Programs
               </h2>
               <p className="leading-relaxed">
-                At EDISAM-Kids, we offer a variety of STEM programs designed to engage and inspire young minds. From coding clubs to science experiments, our programs provide hands-on learning experiences that make STEM subjects fun and accessible.
+                At Golden Gate Int. School (GOGAINS), we offer a variety of STEM programs designed to engage and inspire young minds. From coding clubs to science experiments, our programs provide hands-on learning experiences that make STEM subjects fun and accessible.
               </p>
               <div className="mt-6">
                 <a href="#contact" className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2.5 text-sm font-medium text-school-blue shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
