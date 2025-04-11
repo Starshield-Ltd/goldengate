@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
-import TraditionalDayGallery from "@/components/TraditionalDayGallery";
+import CulturalEventsGallery from "@/components/CulturalEventsGallery";
 import SchoolEnvironmentGallery from "@/components/SchoolEnvironmentGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollButton from "@/components/ScrollButton";
@@ -22,7 +22,7 @@ const Index = () => {
           <About />
           <SchoolEnvironmentGallery />
           <Gallery />
-          <TraditionalDayGallery />
+          <CulturalEventsGallery />
           <Contact />
         </div>
       </main>

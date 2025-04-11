@@ -9,28 +9,33 @@ interface GalleryItem {
   alt: string;
 }
 
-const TraditionalDayGallery = () => {
+const CulturalEventsGallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   const galleryImages: GalleryItem[] = [
     {
       id: 1,
+      src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2020.30.09_468f0f8a.jpg",
+      alt: "Golden Gates March Parade event"
+    },
+    {
+      id: 2,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.19_f6ce1711.jpg",
       alt: "Students in traditional Kente cloth"
     },
     {
-      id: 2,
+      id: 3,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.18_d6c86e42.jpg",
       alt: "Traditional day celebration at Golden Gate"
     },
     {
-      id: 3,
+      id: 4,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.19_58babc59.jpg",
       alt: "Students showcasing Ghanaian culture"
     },
     {
-      id: 4,
+      id: 5,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.19_b3a386a7.jpg",
       alt: "Traditional attire display at Golden Gate"
     }
@@ -64,7 +69,7 @@ const TraditionalDayGallery = () => {
 
   return (
     <section
-      id="traditional-day"
+      id="cultural-events"
       ref={sectionRef}
       className="section-padding overflow-hidden relative border-t-0"
     >
@@ -89,7 +94,7 @@ const TraditionalDayGallery = () => {
           )}>
             <span className="inline-flex items-center">
               <GalleryHorizontal className="w-8 h-8 mr-3 text-school-yellow" />
-              Traditional Day
+              Cultural Events & Parades
             </span>
           </h2>
           <div className={cn(
@@ -100,8 +105,8 @@ const TraditionalDayGallery = () => {
             "text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
-            Celebrating Ghanaian culture and heritage through our annual Traditional Day event,
-            where students proudly showcase their cultural attire and learn about their rich heritage.
+            Celebrating Ghanaian culture and heritage through our annual Traditional Day and March Parade events,
+            where students proudly showcase their cultural attire, participate in community parades, and learn about their rich heritage.
           </p>
         </div>
 
@@ -157,4 +162,4 @@ const TraditionalDayGallery = () => {
   );
 };
 
-export default TraditionalDayGallery;
+export default CulturalEventsGallery;
