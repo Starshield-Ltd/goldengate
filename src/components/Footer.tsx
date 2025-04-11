@@ -181,10 +181,10 @@ const Footer = () => {
           href="https://linkedin.com/in/edhumbling"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block hover:text-school-yellow transition-all duration-300 font-medium"
+          className="inline-block font-medium emma-glow"
         >
           Emma
-        </a> from AIDEL
+        </a> from Artificial Intelligence Development Experimental Labs (AIDEL)
       </div>
 
       <style jsx>{`
@@ -247,6 +247,31 @@ const Footer = () => {
             text-shadow: 0 0 15px #00ffff,
                        0 0 25px #00ffff,
                        0 0 35px #00ffff;
+          }
+        }
+
+        .emma-glow {
+          position: relative;
+          animation: emmaGlow 3s ease-in-out infinite;
+          transition: all 0.3s ease;
+        }
+
+        .emma-glow:hover {
+          transform: scale(1.1);
+        }
+
+        @keyframes emmaGlow {
+          0%, 100% {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700,
+                       0 0 10px #FFD700,
+                       0 0 15px #FFD700;
+          }
+          50% {
+            color: #00bfff;
+            text-shadow: 0 0 7px #00bfff,
+                       0 0 14px #00bfff,
+                       0 0 21px #00bfff;
           }
         }
       `}</style>
