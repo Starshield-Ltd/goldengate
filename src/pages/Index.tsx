@@ -26,7 +26,7 @@ const Index = () => {
           <Contact />
         </div>
       </main>
-      <WhatsAppButton phoneNumber="0246186629" />
+      <WhatsAppButton phoneNumber="233246186629" />
       <ScrollButton />
       <ScrollToTop />
       <Footer />
