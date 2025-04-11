@@ -127,19 +127,19 @@ const StemResources = () => {
                   <h3 className="text-xl font-semibold text-school-blue">Cool STEM Websites</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
                     <li className="pl-2">
-                      <strong className="text-school-blue">Khan Academy:</strong> A free learning resource tailored for your child. Your child will get a personalized learning dashboard that will guide them through each subject like a personal coach while using state-of-the-art, adaptive technology that identifies strengths and learning gaps while suggesting skills to practice.
+                      <strong className="text-school-blue"><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Khan Academy:</a></strong> A free learning resource tailored for your child. Your child will get a personalized learning dashboard that will guide them through each subject like a personal coach while using state-of-the-art, adaptive technology that identifies strengths and learning gaps while suggesting skills to practice.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Sheppard Software:</strong> Aims to create content and games with goals to add sound and visual effects to make learning fun and more memorable, design games with many difficulty levels, and provide games that will exercise players' brains.
+                      <strong className="text-school-blue"><a href="https://www.sheppardsoftware.com/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Sheppard Software:</a></strong> Aims to create content and games with goals to add sound and visual effects to make learning fun and more memorable, design games with many difficulty levels, and provide games that will exercise players' brains.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Zooniverse:</strong> Provides opportunities for people around the world to contribute to real discoveries in fields ranging from astronomy to zoology. Welcome to the largest online platform for collaborative volunteer research.
+                      <strong className="text-school-blue"><a href="https://www.zooniverse.org/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Zooniverse:</a></strong> Provides opportunities for people around the world to contribute to real discoveries in fields ranging from astronomy to zoology. Welcome to the largest online platform for collaborative volunteer research.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">LearnToMod:</strong> Online and interactive. Mod Minecraft in your browser. Tutorials and puzzles help you unlock badges and learn to code.
+                      <strong className="text-school-blue"><a href="https://www.learntomod.com/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">LearnToMod:</a></strong> Online and interactive. Mod Minecraft in your browser. Tutorials and puzzles help you unlock badges and learn to code.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">NASA Kids' Club:</strong> At NASA Kids' Club, it's perfectly okay to fool around in space. You can use your science and math skills to explore Mars, construct a fleet of rockets or search for NASA spinoffs in your garage.
+                      <strong className="text-school-blue"><a href="https://www.nasa.gov/learning-resources/nasa-kids-club/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">NASA Kids' Club:</a></strong> At NASA Kids' Club, it's perfectly okay to fool around in space. You can use your science and math skills to explore Mars, construct a fleet of rockets or search for NASA spinoffs in your garage.
                     </li>
                   </ul>
                 </TabsContent>
@@ -148,19 +148,19 @@ const StemResources = () => {
                   <h3 className="text-xl font-semibold text-school-blue">Science Games and Apps</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
                     <li className="pl-2">
-                      <strong className="text-school-blue">Hopscotch:</strong> Make your own games. Hopscotch is easy to use, but don't let that fool you. It's a powerful language. Explore computer science fundamentals like abstraction, variables, conditionals, loops, and more—while making stuff that you actually want to play.
+                      <strong className="text-school-blue"><a href="https://www.gethopscotch.com/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Hopscotch:</a></strong> Make your own games. Hopscotch is easy to use, but don't let that fool you. It's a powerful language. Explore computer science fundamentals like abstraction, variables, conditionals, loops, and more—while making stuff that you actually want to play.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Virtual Frog Dissection:</strong> All of the education with none of the guts. This app allows you to wield virtual dissection tools to uncover the mysteries of amphibian anatomy.
+                      <strong className="text-school-blue"><a href="https://apps.apple.com/us/app/frog-dissection/id377626675" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Virtual Frog Dissection:</a></strong> All of the education with none of the guts. This app allows you to wield virtual dissection tools to uncover the mysteries of amphibian anatomy.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Solar System for iPad:</strong> Explore the universe on your tablet with stunning visuals, 150-plus story pages, images from the Mars rover Curiosity and a 3-D orrery that lets you control the orbits of planets and their moons.
+                      <strong className="text-school-blue"><a href="https://apps.apple.com/us/app/solar-walk-2-space-explorer/id1081356781" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Solar System for iPad:</a></strong> Explore the universe on your tablet with stunning visuals, 150-plus story pages, images from the Mars rover Curiosity and a 3-D orrery that lets you control the orbits of planets and their moons.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Minecraft:</strong> Minecraft is a popular 3-D block-building game that pushes your imagination to the limits. Protect yourself against nocturnal monsters or a build a giant one-of-a-kind creation.
+                      <strong className="text-school-blue"><a href="https://www.minecraft.net/en-us" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Minecraft:</a></strong> Minecraft is a popular 3-D block-building game that pushes your imagination to the limits. Protect yourself against nocturnal monsters or a build a giant one-of-a-kind creation.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Mathemagics Mental Math Tricks:</strong> Amaze friends and parents with these quick (but impressive) mathematics tricks.
+                      <strong className="text-school-blue"><a href="https://apps.apple.com/us/app/mathemagics-mental-math/id306586847" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Mathemagics Mental Math Tricks:</a></strong> Amaze friends and parents with these quick (but impressive) mathematics tricks.
                     </li>
                   </ul>
                 </TabsContent>
@@ -169,16 +169,16 @@ const StemResources = () => {
                   <h3 className="text-xl font-semibold text-school-blue">STEM Camps and Programs</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
                     <li className="pl-2">
-                      <strong className="text-school-blue">Camp Invention:</strong> Daydreams become discoveries at this summer day camp. Created by the National Inventors Hall of Fame, Camp Invention presents essential STEM concepts through creative hands-on activities.
+                      <strong className="text-school-blue"><a href="https://www.invent.org/programs/camp-invention" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Camp Invention:</a></strong> Daydreams become discoveries at this summer day camp. Created by the National Inventors Hall of Fame, Camp Invention presents essential STEM concepts through creative hands-on activities.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Destination Science Camp:</strong> Spend a week this summer creating robots, building a digital music system, training an electric-powered chameleon or even preparing for a mission to the moon! Held at 130 locations in six states.
+                      <strong className="text-school-blue"><a href="https://destinationscience.org/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Destination Science Camp:</a></strong> Spend a week this summer creating robots, building a digital music system, training an electric-powered chameleon or even preparing for a mission to the moon! Held at 130 locations in six states.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Engineering for Kids:</strong> Engineering for Kids is an education company for kids age 4 to 14. It offers a variety of STEM programs, including in-school field trips, birthday parties, workshops and camps.
+                      <strong className="text-school-blue"><a href="https://www.engineeringforkids.com/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Engineering for Kids:</a></strong> Engineering for Kids is an education company for kids age 4 to 14. It offers a variety of STEM programs, including in-school field trips, birthday parties, workshops and camps.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">CoderDojo:</strong> Over 1,900 free, open, inclusive and local volunteer-led programming clubs for young people in over 100 countries.
+                      <strong className="text-school-blue"><a href="https://coderdojo.com/" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">CoderDojo:</a></strong> Over 1,900 free, open, inclusive and local volunteer-led programming clubs for young people in over 100 countries.
                     </li>
                   </ul>
                 </TabsContent>
@@ -187,16 +187,16 @@ const StemResources = () => {
                   <h3 className="text-xl font-semibold text-school-blue">Books</h3>
                   <ul className="space-y-4 list-disc pl-6 text-gray-800">
                     <li className="pl-2">
-                      <strong className="text-school-blue">Learn to Program with Scratch:</strong> A Visual Introduction to Programming with Games, Art, Science, and Math: Scratch is a fun, free, beginner-friendly programming environment where you connect blocks of code to build programs.
+                      <strong className="text-school-blue"><a href="https://www.amazon.com/Learn-Program-Scratch-Introduction-Programming/dp/1593275439" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Learn to Program with Scratch:</a></strong> A Visual Introduction to Programming with Games, Art, Science, and Math: Scratch is a fun, free, beginner-friendly programming environment where you connect blocks of code to build programs.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">JavaScript for Kids:</strong> A Playful Introduction to Programming: JavaScript is the programming language of the Internet, the secret sauce that makes the Web awesome, your favorite sites interactive, and online games fun!
+                      <strong className="text-school-blue"><a href="https://www.amazon.com/JavaScript-Kids-Playful-Introduction-Programming/dp/1593274084" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">JavaScript for Kids:</a></strong> A Playful Introduction to Programming: JavaScript is the programming language of the Internet, the secret sauce that makes the Web awesome, your favorite sites interactive, and online games fun!
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Python for Kids:</strong> A Playful Introduction to Programming: Python is a powerful, expressive programming language that's easy to learn and fun to use! But books about learning to program in Python can be kind of dull, gray, and boring, and that's no fun for anyone.
+                      <strong className="text-school-blue"><a href="https://www.amazon.com/Python-Kids-Playful-Introduction-Programming/dp/1593274076" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Python for Kids:</a></strong> A Playful Introduction to Programming: Python is a powerful, expressive programming language that's easy to learn and fun to use! But books about learning to program in Python can be kind of dull, gray, and boring, and that's no fun for anyone.
                     </li>
                     <li className="pl-2">
-                      <strong className="text-school-blue">Bossy:</strong> Online Startups for Kids and Teens: The internet makes business accessible to everyone - even kids and teenagers! This book will help young "CEOs To Be" learn how to be their own boss and build a business that will inspire them to never back down on their dreams.
+                      <strong className="text-school-blue"><a href="https://github.com/ashleymcnamara/STEM_Resources_For_Kids" target="_blank" rel="noopener noreferrer" className="text-school-blue hover:underline">Bossy:</a></strong> Online Startups for Kids and Teens: The internet makes business accessible to everyone - even kids and teenagers! This book will help young "CEOs To Be" learn how to be their own boss and build a business that will inspire them to never back down on their dreams.
                     </li>
                   </ul>
                 </TabsContent>
