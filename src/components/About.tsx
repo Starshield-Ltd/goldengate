@@ -2,7 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import ImageWithLoader from './ImageWithLoader';
-import { Book, Clock, Calendar, School } from 'lucide-react';
+import { Book, Clock, Calendar, School, Award, Target, Lightbulb, Users, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,8 +22,8 @@ const About = () => {
       },
       {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.2,
+        rootMargin: '100px',
+        threshold: 0.05,
       }
     );
 
@@ -43,10 +44,36 @@ const About = () => {
       ref={sectionRef}
       className="section-padding relative overflow-hidden pt-20 md:pt-24"
     >
-      {/* School-themed background elements */}
+      {/* Top design images */}
+      <div className="absolute top-0 left-0 w-full h-40 md:h-60 overflow-hidden z-0">
+        {/* First design image */}
+        <div className="absolute inset-0">
+          <ImageWithLoader
+            src="https://ik.imagekit.io/edhumbling/golden%20gate/ChatGPT%20Image%20Apr%2011,%202025,%2006_50_55%20PM.png"
+            alt="Golden Gate Design Banner"
+            className="w-full h-full object-cover opacity-15"
+          />
+        </div>
+
+        {/* Second design image */}
+        <div className="absolute inset-0 flex justify-end items-start">
+          <div className="w-full md:w-1/2 h-full">
+            <ImageWithLoader
+              src="https://ik.imagekit.io/edhumbling/golden%20gate/ChatGPT%20Image%20Apr%2011,%202025,%2006_53_54%20PM.png"
+              alt="Golden Gate Design Element"
+              className="w-full h-full object-contain opacity-20"
+            />
+          </div>
+        </div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+      </div>
+
+      {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Design image */}
-        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-10 md:opacity-15">
+        <div className="absolute top-1/4 right-0 w-full md:w-1/2 h-3/4 opacity-10 md:opacity-15">
           <ImageWithLoader
             src="https://ik.imagekit.io/edhumbling/golden%20gate/SnapBG.ai_1744396736540.png"
             alt="Golden Gate Design Element"
@@ -54,9 +81,11 @@ const About = () => {
           />
         </div>
 
+        {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-school-yellow/10"></div>
         <div className="absolute bottom-40 right-20 w-40 h-40 rounded-full bg-school-blue/10"></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-school-yellow/10"></div>
+        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-school-yellow/10 blur-xl"></div>
+        <div className="absolute bottom-40 -left-20 w-48 h-48 rounded-full bg-school-yellow/10 blur-xl"></div>
 
         {/* Academic pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -79,20 +108,21 @@ const About = () => {
         </svg>
       </div>
 
-      <div className="content-container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="content-container relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 relative">
           <h2 className={cn(
-            "text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-700",
+            "text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-500",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             About Our School
           </h2>
           <div className={cn(
-            "h-1 w-24 bg-gradient-to-r from-school-blue to-school-yellow mx-auto mb-8 rounded-full shadow-md transition-all duration-700 delay-100",
+            "h-1 w-24 bg-gradient-to-r from-school-blue to-school-yellow mx-auto mb-8 rounded-full shadow-md transition-all duration-500 delay-100",
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
+            "text-xl text-gray-700 leading-relaxed transition-all duration-500 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Located in Afrancho, Kumasi in the Ashanti Region of Ghana (P.O. Box AH 2984), Golden Gate Int. School
@@ -100,11 +130,43 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
-          <div className={cn(
-            "relative transition-all duration-700 delay-300",
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          )}>
+        {/* Mission & Vision Section */}
+        <div className={cn(
+          "grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 transition-all duration-500 delay-300",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        )}>
+          <div className="glass-dark rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow h-full flex flex-col">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Target className="w-6 h-6 md:w-8 md:h-8 mr-3 md:mr-4 text-school-yellow" />
+              <h3 className="text-xl md:text-2xl font-bold font-heading text-school-yellow drop-shadow-md">Our Mission</h3>
+            </div>
+            <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed flex-grow">
+              To revolutionize education by integrating cutting-edge technology and innovative teaching methodologies,
+              empowering students to become future-ready information technology professionals and digital leaders who will
+              transform Ghana's technological landscape and compete on the global stage.
+            </p>
+          </div>
+
+          <div className="glass-dark rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow h-full flex flex-col">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Lightbulb className="w-6 h-6 md:w-8 md:h-8 mr-3 md:mr-4 text-school-yellow" />
+              <h3 className="text-xl md:text-2xl font-bold font-heading text-school-yellow drop-shadow-md">Our Vision</h3>
+            </div>
+            <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed flex-grow">
+              To be Ghana's premier technology-focused educational institution, nurturing a new generation of
+              innovative thinkers, digital creators, and tech entrepreneurs who will lead Africa's digital revolution
+              and shape the future of global technology with a distinctly African perspective.
+            </p>
+          </div>
+        </div>
+
+        {/* School Image & Stats */}
+        <div className={cn(
+          "flex flex-col md:flex-row gap-8 md:gap-10 mb-12 md:mb-16 items-center",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        )}>
+          {/* Image Container */}
+          <div className="relative w-full md:w-1/2 transition-all duration-500 delay-400">
             {/* Zaha Hadid inspired curved container */}
             <div className="relative">
               <div className="absolute -top-5 -left-5 right-5 bottom-5 bg-gradient-to-tr from-school-blue/40 to-school-yellow/40 rounded-[70px_30px_50px_20px] transform rotate-6 backdrop-blur-sm border border-school-yellow/30"></div>
@@ -143,126 +205,162 @@ const About = () => {
             </div>
           </div>
 
-          <div className={cn(
-            "space-y-8 transition-all duration-700 delay-400",
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-          )}>
-            {/* Programs Offered */}
-            <div className="glass-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
-              <h3 className="text-xl font-bold font-heading text-school-yellow mb-4 flex items-center drop-shadow-md">
-                <School className="w-6 h-6 mr-3 text-school-yellow" />
-                Our Programs
-              </h3>
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">Creche</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">Nursery</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">Kindergarten</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">Primary</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">JHS 1</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">JHS 2</p>
-                </div>
-                <div className="flex items-center space-x-2 bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <div className="h-3 w-3 rounded-full bg-school-yellow"></div>
-                  <p className="text-white">JHS 3</p>
-                </div>
-              </div>
-            </div>
-
+          {/* School Hours & Programs */}
+          <div className="w-full md:w-1/2 space-y-6 transition-all duration-500 delay-500">
             {/* School Hours */}
-            <div className="glass-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
-              <h3 className="text-xl font-bold font-heading text-school-yellow mb-4 flex items-center drop-shadow-md">
-                <Clock className="w-6 h-6 mr-3 text-school-yellow" />
+            <div className="glass-dark rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
+              <h3 className="text-lg md:text-xl font-bold font-heading text-school-yellow mb-3 md:mb-4 flex items-center drop-shadow-md">
+                <Clock className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-school-yellow" />
                 School Hours
               </h3>
-              <div className="space-y-3 mt-4">
+              <div className="space-y-3 mt-3 md:mt-4">
                 <div className="flex justify-between items-center bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <p className="text-white flex items-center">
+                  <p className="text-white flex items-center text-sm md:text-base">
                     <Calendar className="w-4 h-4 mr-2 text-school-yellow" />
                     Monday - Friday
                   </p>
-                  <p className="text-white font-medium">7:00 AM - 4:00 PM</p>
+                  <p className="text-white font-medium text-sm md:text-base">7:00 AM - 4:00 PM</p>
                 </div>
                 <div className="flex justify-between items-center bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <p className="text-white flex items-center">
+                  <p className="text-white flex items-center text-sm md:text-base">
                     <Calendar className="w-4 h-4 mr-2 text-school-yellow/70" />
                     Saturday - Sunday
                   </p>
-                  <p className="text-white font-medium">Closed</p>
+                  <p className="text-white font-medium text-sm md:text-base">Closed</p>
                 </div>
               </div>
             </div>
 
-            {/* Mission */}
-            <div className="glass-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
-              <h3 className="text-xl font-bold font-heading text-school-yellow mb-4 flex items-center drop-shadow-md">
-                <Book className="w-6 h-6 mr-3 text-school-yellow" />
-                Our Mission
+            {/* Programs Offered */}
+            <div className="glass-dark rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
+              <h3 className="text-lg md:text-xl font-bold font-heading text-school-yellow mb-3 md:mb-4 flex items-center drop-shadow-md">
+                <School className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-school-yellow" />
+                Our Programs
               </h3>
-              <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                To revolutionize education by integrating cutting-edge technology and innovative teaching methodologies,
-                empowering students to become future-ready information technology professionals and digital leaders who will
-                transform Ghana's technological landscape and compete on the global stage.
-              </p>
+              <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4">
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">Creche</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">Nursery</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">Kindergarten</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">Primary</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">JHS 1</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">JHS 2</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-school-blue/20 p-2 md:p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-school-yellow"></div>
+                  <p className="text-white text-sm md:text-base">JHS 3</p>
+                </div>
+              </div>
             </div>
 
-            {/* Vision */}
-            <div className="glass-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
-              <h3 className="text-xl font-bold font-heading text-school-yellow mb-4 flex items-center drop-shadow-md">
-                <Book className="w-6 h-6 mr-3 text-school-yellow" />
-                Our Vision
-              </h3>
-              <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                To be Ghana's premier technology-focused educational institution, nurturing a new generation of
-                innovative thinkers, digital creators, and tech entrepreneurs who will lead Africa's digital revolution
-                and shape the future of global technology with a distinctly African perspective.
-              </p>
-            </div>
-
-            {/* Core Values */}
-            <div className="glass-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow mt-8">
-              <h3 className="text-xl font-bold font-heading text-school-yellow mb-4 flex items-center drop-shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-school-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            {/* Contact Info */}
+            <div className="glass-dark rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow">
+              <h3 className="text-lg md:text-xl font-bold font-heading text-school-yellow mb-3 md:mb-4 flex items-center drop-shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-school-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Our Core Values
+                Contact Us
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <div className="bg-school-blue/20 p-4 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <h4 className="text-school-yellow font-semibold mb-2">Digital Innovation</h4>
-                  <p className="text-white/80 text-sm">Embracing cutting-edge technology and fostering a culture of innovation in everything we do.</p>
+              <div className="space-y-3 mt-3 md:mt-4">
+                <div className="flex items-center bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-3 text-school-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <a href="tel:+233246186629" className="text-white text-sm md:text-base hover:text-school-yellow transition-colors">0246186629</a>
                 </div>
-                <div className="bg-school-blue/20 p-4 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <h4 className="text-school-yellow font-semibold mb-2">Future-Focused Learning</h4>
-                  <p className="text-white/80 text-sm">Preparing students for careers that don't yet exist, with skills that transcend traditional education.</p>
+                <div className="flex items-center bg-school-blue/20 p-3 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-3 text-school-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <a href="mailto:info@goldengateintschool.com" className="text-white text-sm md:text-base hover:text-school-yellow transition-colors">info@goldengateintschool.com</a>
                 </div>
-                <div className="bg-school-blue/20 p-4 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <h4 className="text-school-yellow font-semibold mb-2">Computational Thinking</h4>
-                  <p className="text-white/80 text-sm">Developing logical reasoning, algorithmic thinking, and problem-solving skills from an early age.</p>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+        {/* Core Values */}
+        <div className={cn(
+          "transition-all duration-500 delay-600",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        )}>
+          <div className="glass-dark rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-school-yellow">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Award className="w-6 h-6 md:w-8 md:h-8 mr-3 md:mr-4 text-school-yellow" />
+              <h3 className="text-xl md:text-2xl font-bold font-heading text-school-yellow drop-shadow-md">Our Core Values</h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-4 md:mt-6">
+              <div className="bg-school-blue/20 p-4 md:p-5 rounded-xl backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20 transform hover:-translate-y-1">
+                <div className="flex items-center mb-2 md:mb-3">
+                  <Rocket className="w-4 h-4 md:w-5 md:h-5 mr-2 text-school-yellow" />
+                  <h4 className="text-school-yellow font-semibold text-sm md:text-base">Digital Innovation</h4>
                 </div>
-                <div className="bg-school-blue/20 p-4 rounded-lg backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20">
-                  <h4 className="text-school-yellow font-semibold mb-2">Global Digital Citizenship</h4>
-                  <p className="text-white/80 text-sm">Nurturing responsible, ethical, and culturally aware digital citizens who can thrive in a connected world.</p>
+                <p className="text-white/80 text-xs md:text-sm">Embracing cutting-edge technology and fostering a culture of innovation in everything we do.</p>
+              </div>
+
+              <div className="bg-school-blue/20 p-4 md:p-5 rounded-xl backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20 transform hover:-translate-y-1">
+                <div className="flex items-center mb-2 md:mb-3">
+                  <Lightbulb className="w-4 h-4 md:w-5 md:h-5 mr-2 text-school-yellow" />
+                  <h4 className="text-school-yellow font-semibold text-sm md:text-base">Future-Focused Learning</h4>
                 </div>
+                <p className="text-white/80 text-xs md:text-sm">Preparing students for careers that don't yet exist, with skills that transcend traditional education.</p>
+              </div>
+
+              <div className="bg-school-blue/20 p-4 md:p-5 rounded-xl backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20 transform hover:-translate-y-1">
+                <div className="flex items-center mb-2 md:mb-3">
+                  <Book className="w-4 h-4 md:w-5 md:h-5 mr-2 text-school-yellow" />
+                  <h4 className="text-school-yellow font-semibold text-sm md:text-base">Computational Thinking</h4>
+                </div>
+                <p className="text-white/80 text-xs md:text-sm">Developing logical reasoning, algorithmic thinking, and problem-solving skills from an early age.</p>
+              </div>
+
+              <div className="bg-school-blue/20 p-4 md:p-5 rounded-xl backdrop-blur-sm hover:bg-school-blue/30 transition-all duration-300 border border-school-yellow/20 transform hover:-translate-y-1">
+                <div className="flex items-center mb-2 md:mb-3">
+                  <Users className="w-4 h-4 md:w-5 md:h-5 mr-2 text-school-yellow" />
+                  <h4 className="text-school-yellow font-semibold text-sm md:text-base">Global Digital Citizenship</h4>
+                </div>
+                <p className="text-white/80 text-xs md:text-sm">Nurturing responsible, ethical, and culturally aware digital citizens who can thrive in a connected world.</p>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className={cn(
+          "mt-10 md:mt-12 text-center transition-all duration-500 delay-700",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        )}>
+          <Link
+            to="/enroll-now"
+            className="btn-primary inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 text-base md:text-lg"
+          >
+            Begin Your Journey With Us
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
