@@ -45,6 +45,15 @@ const About = () => {
     >
       {/* School-themed background elements */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Design image */}
+        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-10 md:opacity-15">
+          <ImageWithLoader
+            src="https://ik.imagekit.io/edhumbling/golden%20gate/SnapBG.ai_1744396736540.png"
+            alt="Golden Gate Design Element"
+            className="w-full h-full object-contain md:object-cover"
+          />
+        </div>
+
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-school-yellow/10"></div>
         <div className="absolute bottom-40 right-20 w-40 h-40 rounded-full bg-school-blue/10"></div>
         <div className="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-school-yellow/10"></div>
