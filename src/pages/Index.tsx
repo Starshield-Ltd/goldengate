@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import CulturalEventsGallery from "@/components/CulturalEventsGallery";
+import ExcursionGallery from "@/components/ExcursionGallery";
 import SchoolEnvironmentGallery from "@/components/SchoolEnvironmentGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollButton from "@/components/ScrollButton";
@@ -23,6 +24,7 @@ const Index = () => {
           <SchoolEnvironmentGallery />
           <Gallery />
           <CulturalEventsGallery />
+          <ExcursionGallery />
           <Contact />
         </div>
       </main>
