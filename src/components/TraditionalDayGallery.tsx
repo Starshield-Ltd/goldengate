@@ -105,25 +105,28 @@ const TraditionalDayGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
               className={cn(
-                "group overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-all duration-500 shadow-lg",
+                "group overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-xl",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20",
                 isVisible && `transition-all duration-700 delay-${(index + 1) * 100}`
               )}
             >
-              <div className="relative aspect-[4/3] bg-white">
+              <div className="relative aspect-[4/3] bg-white overflow-hidden">
+                {/* Decorative frame */}
+                <div className="absolute -inset-1 bg-gradient-to-br from-school-blue/30 via-school-yellow/20 to-school-blue/30 rounded-[30px_20px_40px_25px] transform rotate-2 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+
                 <div className="absolute inset-0 bg-white z-10"></div>
-                <div className="absolute inset-0 z-20 p-4">
+                <div className="absolute inset-0 z-20 overflow-hidden">
                   <ImageWithLoader
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                     containerClassName="w-full h-full"
                   />
                 </div>
