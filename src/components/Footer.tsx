@@ -6,16 +6,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-school-blue to-school-yellow text-white relative overflow-hidden">
+    <footer className="bg-school-black text-white relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, white, white 2px, transparent 2px, transparent 20px)' }}></div>
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #FFD700, #FFD700 2px, transparent 2px, transparent 20px)' }}></div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-white/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-school-yellow/20 to-transparent"></div>
 
-      {/* Decorative circles */}
-      <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/10 blur-xl"></div>
-      <div className="absolute bottom-40 -left-20 w-48 h-48 rounded-full bg-white/10 blur-xl"></div>
+      {/* Decorative elements */}
+      <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-school-yellow/10 blur-xl"></div>
+      <div className="absolute bottom-40 -left-20 w-48 h-48 rounded-full bg-school-yellow/10 blur-xl"></div>
       <div className="content-container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
@@ -27,10 +27,13 @@ const Footer = () => {
                 containerClassName="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30"
               />
               <span className="font-heading font-bold text-xl drop-shadow-md">
-                Golden Gate <span className="text-white/90">Int. School</span>
+                Golden Gate <span className="text-school-yellow">Int. School</span>
+              </span>
+              <span className="text-xs font-medium italic text-school-yellow/90 block mt-1">
+                Gateway to Success
               </span>
             </div>
-            <p className="text-white/80 text-sm backdrop-blur-sm glass-gradient inline-block p-3 rounded-xl">
+            <p className="text-white/80 text-sm backdrop-blur-sm bg-school-blue/30 inline-block p-3 rounded-xl border border-school-yellow/30">
               Transforming education through technology and innovation, creating the next generation of IT leaders and digital innovators for Ghana and beyond.
             </p>
             <div className="pt-2">
@@ -38,7 +41,7 @@ const Footer = () => {
                 href="https://wa.me/233246186629"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r from-school-blue to-school-yellow hover:from-school-yellow hover:to-school-blue transition-all duration-500 shadow-lg hover:scale-110 transform"
+                className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r from-school-blue to-school-yellow hover:from-school-yellow hover:to-school-blue transition-all duration-500 shadow-lg hover:scale-110 transform border border-school-yellow/50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -153,29 +156,29 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/20">
+      <div className="border-t border-school-yellow/30">
         <div className="content-container py-6 flex flex-col md:flex-row justify-between items-center">
           <div className="text-white/80 text-sm mb-4 md:mb-0 font-medium">
             &copy; {currentYear} Golden Gate Int. School. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm text-white/80">
-            <Link to="/privacy" className="hover:text-white transition-all duration-300 hover:scale-105 transform">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-all duration-300 hover:scale-105 transform">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Terms of Service</Link>
           </div>
         </div>
-        <div className="overflow-hidden bg-gradient-to-r from-school-yellow/80 to-school-blue/80 py-4 border-t border-white/20 backdrop-blur-sm">
+        <div className="overflow-hidden bg-gradient-to-r from-school-blue/90 to-school-blue/80 py-4 border-t border-school-yellow/30 backdrop-blur-sm">
           <div className="animate-scrolling-text whitespace-nowrap text-6xl font-bold text-white drop-shadow-lg">
-            Golden Gate Int. School — Technology-Driven Education — Building Tomorrow's IT Leaders — Digital Innovation for Africa
+            <span className="text-school-yellow">Gateway to Success</span> — Golden Gate Int. School — Technology-Driven Education — Building Tomorrow's IT Leaders
           </div>
         </div>
       </div>
 
-      <div className="py-3 text-center text-xs text-white/70 border-t border-white/20">
+      <div className="py-3 text-center text-xs text-white/70 border-t border-school-yellow/30">
         Made by <a
           href="https://linkedin.com/in/edhumbling"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block hover:text-white transition-all duration-300 font-medium"
+          className="inline-block hover:text-school-yellow transition-all duration-300 font-medium"
         >
           Emma
         </a> from AIDEL

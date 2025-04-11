@@ -65,17 +65,18 @@ export default {
 				},
         // School colors
         school: {
-          blue: '#1E88E5', // Vibrant blue
-          lightBlue: '#64B5F6', // Light blue for gradients
-          yellow: '#FFC107', // Vibrant yellow
-          lightYellow: '#FFE082', // Light yellow for gradients
-          accent: '#FF9800', // Orange accent for highlights
+          blue: '#0A1128', // Dark blue/blue-black
+          lightBlue: '#1C3879', // Lighter blue for gradients
+          yellow: '#FFD700', // Gold
+          lightYellow: '#FFDF4F', // Light gold for gradients
+          accent: '#B8860B', // Dark gold accent for highlights
+          black: '#000000', // Pure black for footer
         },
         gradient: {
-          blueYellow: 'linear-gradient(135deg, #1E88E5 0%, #FFC107 100%)',
-          yellowBlue: 'linear-gradient(135deg, #FFC107 0%, #1E88E5 100%)',
-          blueLight: 'linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%)',
-          yellowLight: 'linear-gradient(135deg, #FFC107 0%, #FFE082 100%)',
+          blueYellow: 'linear-gradient(135deg, #0A1128 0%, #FFD700 100%)',
+          yellowBlue: 'linear-gradient(135deg, #FFD700 0%, #0A1128 100%)',
+          blueLight: 'linear-gradient(135deg, #0A1128 0%, #1C3879 100%)',
+          yellowLight: 'linear-gradient(135deg, #FFD700 0%, #FFDF4F 100%)',
         },
 			},
 			borderRadius: {

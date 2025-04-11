@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 79% 51%; /* Blue */
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 85% 10%; /* Dark Blue/Blue-Black */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 100% 51%; /* Yellow */
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 50 100% 50%; /* Gold */
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 36 100% 50%; /* Orange accent */
+    --accent: 43 89% 38%; /* Dark gold accent */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,14 +37,14 @@
 
     --radius: 1rem; /* Increased border radius for more modern look */
 
-    --sidebar-background: 210 79% 51%;
+    --sidebar-background: 220 85% 10%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 45 100% 51%;
-    --sidebar-primary-foreground: 0 0% 20%;
-    --sidebar-accent: 36 100% 50%;
+    --sidebar-primary: 50 100% 50%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 43 89% 38%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 210 79% 40%;
-    --sidebar-ring: 45 100% 51%;
+    --sidebar-border: 220 85% 5%;
+    --sidebar-ring: 50 100% 50%;
   }
 
   * {
@@ -87,6 +87,10 @@
     @apply backdrop-blur-lg bg-gradient-to-br from-school-blue/20 to-school-yellow/20 border border-white/20 shadow-lg rounded-2xl;
   }
 
+  .glass-dark {
+    @apply backdrop-blur-lg bg-black/80 border border-school-yellow/30 shadow-lg rounded-2xl;
+  }
+
   .section-padding {
     @apply py-16 md:py-24 px-4 sm:px-6 md:px-8 lg:px-12;
   }
@@ -97,17 +101,17 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
-    bg-gradient-to-r from-school-blue to-school-lightBlue text-white hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-blue focus:ring-offset-2;
+    bg-gradient-to-r from-school-blue to-school-lightBlue text-white hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-blue focus:ring-offset-2 border border-school-yellow/30;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
-    bg-gradient-to-r from-school-yellow to-school-lightYellow text-gray-800 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-yellow focus:ring-offset-2;
+    bg-gradient-to-r from-school-yellow to-school-lightYellow text-school-blue hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-yellow focus:ring-offset-2 border border-school-blue/30;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-xl border-2 border-white/80 px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
-    backdrop-blur-sm bg-white/10 text-white hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-school-yellow px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
+    backdrop-blur-sm bg-school-blue/80 text-white hover:bg-school-blue hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-yellow focus:ring-offset-2;
   }
 
   /* Card stylings */

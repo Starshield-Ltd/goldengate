@@ -35,12 +35,20 @@ const Navbar = () => {
             containerClassName="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30"
             priority
           />
-          <span className={cn(
-            "font-heading font-semibold transition-all duration-300",
-            isScrolled ? "text-white text-lg drop-shadow-md" : "text-white text-xl drop-shadow-md",
-          )}>
-            Golden Gate <span className="text-school-yellow">Int. School</span>
-          </span>
+          <div className="flex flex-col">
+            <span className={cn(
+              "font-heading font-semibold transition-all duration-300",
+              isScrolled ? "text-white text-lg drop-shadow-md" : "text-white text-xl drop-shadow-md",
+            )}>
+              Golden Gate <span className="text-school-yellow">Int. School</span>
+            </span>
+            <span className={cn(
+              "text-xs font-medium italic transition-all duration-300",
+              isScrolled ? "text-school-yellow/90" : "text-school-yellow",
+            )}>
+              Gateway to Success
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -27,29 +27,31 @@ const Hero = () => {
           className="w-full h-full object-contain md:object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-school-blue/80 to-school-yellow/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-school-blue/90 to-school-blue/80" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOHY2YzYuNjMgMCAxMiA1LjM3IDEyIDEyaC02YzAgNi42MyA1LjM3IDEyIDEyIDEyIDYuNjMgMCAxMi01LjM3IDEyLTEyaC02eiIgZmlsbD0iI0ZGRDcwMCIgZmlsbC1vcGFjaXR5PSIuMSIvPjwvZz48L3N2Zz4=')]" style={{ opacity: 0.05 }} />
       </div>
 
       {/* Decorative Elements */}
       <div className="absolute inset-0 z-0 opacity-30 pointer-events-none overflow-hidden">
         {/* Animated circles */}
-        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-white/20 animate-float blur-xl"></div>
-        <div className="absolute bottom-40 right-10 w-60 h-60 rounded-full bg-white/20 animate-float blur-xl" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute top-1/3 left-1/4 w-32 h-32 rounded-full bg-white/20 animate-float blur-xl" style={{animationDelay: '0.7s'}}></div>
+        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-school-yellow/30 animate-float blur-xl"></div>
+        <div className="absolute bottom-40 right-10 w-60 h-60 rounded-full bg-school-yellow/30 animate-float blur-xl" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-32 h-32 rounded-full bg-school-yellow/30 animate-float blur-xl" style={{animationDelay: '0.7s'}}></div>
 
-        {/* Geometric shapes */}
-        <svg className="absolute top-20 left-10 w-40 h-40 text-white animate-float" viewBox="0 0 100 100">
-          <path d="M20,50 Q40,20 60,50 T100,50" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          <circle cx="75" cy="40" r="8" fill="currentColor" />
+        {/* School-themed elements */}
+        <svg className="absolute top-20 left-10 w-40 h-40 text-school-yellow/40 animate-float" viewBox="0 0 100 100">
+          <path d="M50,10 L90,40 L50,70 L10,40 Z" fill="currentColor" />
+          <path d="M50,20 L50,60" stroke="white" strokeWidth="2" strokeDasharray="4 2" />
+          <path d="M30,40 L70,40" stroke="white" strokeWidth="2" strokeDasharray="4 2" />
         </svg>
-        <svg className="absolute bottom-40 right-10 w-60 h-60 text-white animate-float" viewBox="0 0 100 100" style={{animationDelay: '0.5s'}}>
-          <path d="M10,30 Q50,10 70,30 T100,50" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          <path d="M30,60 Q50,80 90,60" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+        <svg className="absolute bottom-40 right-10 w-60 h-60 text-school-yellow/40 animate-float" viewBox="0 0 100 100" style={{animationDelay: '0.5s'}}>
+          <path d="M20,80 L50,20 L80,80 Z" fill="currentColor" />
+          <circle cx="50" cy="50" r="15" fill="none" stroke="white" strokeWidth="2" strokeDasharray="4 2" />
         </svg>
 
-        {/* Diagonal lines pattern */}
+        {/* Academic pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, white, white 2px, transparent 2px, transparent 20px)' }}></div>
+          <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,215,0,0.2), rgba(255,215,0,0.2) 2px, transparent 2px, transparent 20px)' }}></div>
         </div>
       </div>
 
@@ -60,9 +62,12 @@ const Hero = () => {
             "text-white max-w-xl transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight text-white drop-shadow-lg">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-4 leading-tight text-white drop-shadow-lg">
               Golden Gate <span className="text-school-yellow drop-shadow-md">Int. School</span>
             </h1>
+            <p className="text-2xl md:text-3xl italic text-school-yellow mb-6 font-medium drop-shadow-md">
+              Gateway to Success
+            </p>
             <p className="text-xl md:text-2xl text-white mb-10 max-w-lg font-light drop-shadow-md">
               Transforming education through technology and innovation at our Afrancho, Kumasi campus, preparing the next generation of IT leaders and digital innovators.
             </p>
@@ -90,9 +95,9 @@ const Hero = () => {
                 className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 glass-gradient rounded-2xl overflow-hidden shadow-2xl -rotate-3 transform hover:rotate-0 transition-all duration-500 w-48 h-48 z-20 border-2 border-white/30">
-              <div className="p-4 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/70 to-school-yellow/70 h-full flex flex-col justify-center items-center">
-                <h3 className="text-lg font-semibold mb-2 drop-shadow-md">Our Mission</h3>
+            <div className="absolute -bottom-6 -left-6 glass-dark rounded-2xl overflow-hidden shadow-2xl -rotate-3 transform hover:rotate-0 transition-all duration-500 w-48 h-48 z-20 border-2 border-school-yellow">
+              <div className="p-4 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/90 to-school-blue/80 h-full flex flex-col justify-center items-center">
+                <h3 className="text-lg font-semibold mb-2 drop-shadow-md text-school-yellow">Our Mission</h3>
                 <p className="text-sm drop-shadow-md">Creating future-ready IT professionals</p>
               </div>
             </div>
