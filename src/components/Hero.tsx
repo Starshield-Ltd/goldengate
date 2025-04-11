@@ -17,22 +17,22 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+      className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-16 pb-12 overflow-hidden"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <ImageWithLoader
           src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.14_41d6b5c5.jpg?updatedAt=1744390976920"
           alt="Golden Gate Int. School Students"
-          className="w-full h-full object-contain md:object-cover"
+          className="w-full h-full object-cover md:object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-school-blue/90 to-school-blue/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-school-blue/95 to-school-blue/90 md:from-school-blue/90 md:to-school-blue/80" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOHY2YzYuNjMgMCAxMiA1LjM3IDEyIDEyaC02YzAgNi42MyA1LjM3IDEyIDEyIDEyIDYuNjMgMCAxMi01LjM3IDEyLTEyaC02eiIgZmlsbD0iI0ZGRDcwMCIgZmlsbC1vcGFjaXR5PSIuMSIvPjwvZz48L3N2Zz4=')]" style={{ opacity: 0.05 }} />
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-20 md:opacity-30 pointer-events-none overflow-hidden">
         {/* Animated circles */}
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-school-yellow/30 animate-float blur-xl"></div>
         <div className="absolute bottom-40 right-10 w-60 h-60 rounded-full bg-school-yellow/30 animate-float blur-xl" style={{animationDelay: '1.5s'}}></div>
@@ -58,20 +58,39 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Mobile Hero Image - Only visible on mobile */}
+          <div className="lg:hidden block mb-4 relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/20 aspect-[4/3] max-w-xs mx-auto">
+              <ImageWithLoader
+                src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.15_e6ce72f4.jpg?updatedAt=1744390971166"
+                alt="Golden Gate Int. School Students"
+                className="w-full h-full object-cover"
+                containerClassName="w-full h-full"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-school-blue/80 to-transparent"></div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 glass-dark rounded-xl overflow-hidden shadow-lg w-32 h-32 z-20 border-2 border-school-yellow">
+              <div className="p-3 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/90 to-school-blue/80 h-full flex flex-col justify-center items-center">
+                <h3 className="text-xs font-semibold mb-1 drop-shadow-md text-school-yellow">Our Mission</h3>
+                <p className="text-[10px] drop-shadow-md text-center">Creating future-ready IT professionals</p>
+              </div>
+            </div>
+          </div>
           <div className={cn(
             "text-white max-w-xl transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-4 leading-tight text-white drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-2 sm:mb-4 leading-tight text-white drop-shadow-lg text-center lg:text-left">
               Golden Gate <span className="text-school-yellow drop-shadow-md">Int. School</span>
             </h1>
-            <p className="text-xl sm:text-2xl md:text-2xl italic text-school-yellow mb-4 font-medium drop-shadow-md">
+            <p className="text-xl sm:text-2xl md:text-2xl italic text-school-yellow mb-3 sm:mb-4 font-medium drop-shadow-md text-center lg:text-left">
               Gateway to Success
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-white mb-6 max-w-lg font-light drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl text-white mb-6 max-w-lg font-light drop-shadow-md text-center lg:text-left mx-auto lg:mx-0">
               Transforming education through technology and innovation at our Afrancho, Kumasi campus, preparing the next generation of IT leaders and digital innovators.
             </p>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-4 sm:gap-6 justify-center lg:justify-start">
               <a href="#about" className="btn-secondary text-xs sm:text-sm">
                 Discover More
               </a>
@@ -116,7 +135,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center animate-bounce">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center animate-bounce">
         <span className="text-sm mb-2 font-medium drop-shadow-md">Scroll Down</span>
         <div className="glass-blue p-2 rounded-full">
           <svg
