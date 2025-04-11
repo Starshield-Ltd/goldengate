@@ -20,13 +20,13 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 py-2',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-3 py-2 w-full',
         isScrolled
           ? 'bg-gradient-to-r from-school-blue/90 to-school-yellow/90 backdrop-blur-lg shadow-lg py-2'
           : 'bg-transparent py-4'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="w-full mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <ImageWithLoader
             src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.41.51_a712a956.jpg"

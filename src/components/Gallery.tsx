@@ -18,17 +18,17 @@ const Gallery = () => {
     {
       id: 1,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.14_41d6b5c5.jpg?updatedAt=1744390976920",
-      alt: "Happy students at Golden Gate Int. School"
+      alt: "Bright minds in our distinctive yellow and blue uniform"
     },
     {
       id: 2,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.15_e6ce72f4.jpg?updatedAt=1744390971166",
-      alt: "Students learning together"
+      alt: "Our dedicated teacher with promising young scholars"
     },
     {
       id: 3,
       src: "https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.36.13_a7999d6e.jpg?updatedAt=1744390982171",
-      alt: "Students engaged in activities"
+      alt: "Future leaders in our nurturing educational environment"
     }
   ];
 
@@ -62,7 +62,7 @@ const Gallery = () => {
     <section
       id="gallery"
       ref={sectionRef}
-      className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden relative"
+      className="section-padding overflow-hidden relative border-t-0"
     >
       {/* Montessori Scribbles and Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -110,7 +110,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}

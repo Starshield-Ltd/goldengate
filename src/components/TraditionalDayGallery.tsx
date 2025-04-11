@@ -12,7 +12,7 @@ interface GalleryItem {
 const TraditionalDayGallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const galleryImages: GalleryItem[] = [
     {
       id: 1,
@@ -63,20 +63,20 @@ const TraditionalDayGallery = () => {
   }, []);
 
   return (
-    <section 
-      id="traditional-day" 
+    <section
+      id="traditional-day"
       ref={sectionRef}
-      className="section-padding bg-gradient-to-b from-white to-gray-50 overflow-hidden relative"
+      className="section-padding overflow-hidden relative border-t-0"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #FFD700, #FFD700 2px, transparent 2px, transparent 20px)' }}></div>
       </div>
       <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-school-yellow/20 to-transparent"></div>
-      
+
       {/* School-themed pattern */}
       <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 5 L55 30 L30 55 L5 30 Z\' stroke=\'%23FFD700\' stroke-width=\'1\' fill=\'none\' /%3E%3C/svg%3E")' }}></div>
-      
+
       {/* Decorative circles */}
       <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-school-yellow/10 blur-xl"></div>
       <div className="absolute bottom-40 -left-20 w-48 h-48 rounded-full bg-school-yellow/10 blur-xl"></div>
@@ -105,14 +105,14 @@ const TraditionalDayGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {galleryImages.map((image, index) => (
-            <div 
+            <div
               key={image.id}
               className={cn(
                 "group overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-all duration-500 shadow-lg",
-                isVisible 
-                  ? "opacity-100 translate-y-0" 
+                isVisible
+                  ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20",
                 isVisible && `transition-all duration-700 delay-${(index + 1) * 100}`
               )}
@@ -134,7 +134,7 @@ const TraditionalDayGallery = () => {
             </div>
           ))}
         </div>
-        
+
         <div className={cn(
           "mt-16 text-center transition-all duration-700 delay-600",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -142,8 +142,8 @@ const TraditionalDayGallery = () => {
           <p className="text-gray-700 mb-6">
             At Golden Gate Int. School, we believe in preserving and celebrating our cultural heritage while preparing students for the future.
           </p>
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             className="btn-primary inline-flex items-center gap-2"
           >
             Contact Us to Learn More

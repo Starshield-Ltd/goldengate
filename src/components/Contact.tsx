@@ -55,7 +55,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="section-padding relative overflow-hidden border-t-0"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -91,7 +91,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
           {/* Contact Information */}
           <div className={cn(
             "transition-all duration-700 delay-300",

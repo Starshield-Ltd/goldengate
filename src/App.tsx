@@ -5,6 +5,7 @@ import ScrollButton from "@/components/ScrollButton";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PerformanceOptimizer />
         <ScrollToTop />
         <ScrollButton />
         <Routes>

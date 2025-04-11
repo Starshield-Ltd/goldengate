@@ -41,7 +41,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="section-padding bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+      className="section-padding relative overflow-hidden pt-20 md:pt-24"
     >
       {/* School-themed background elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -91,7 +91,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           <div className={cn(
             "relative transition-all duration-700 delay-300",
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"

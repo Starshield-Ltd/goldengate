@@ -5,20 +5,24 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import TraditionalDayGallery from "@/components/TraditionalDayGallery";
+import SchoolEnvironmentGallery from "@/components/SchoolEnvironmentGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollButton from "@/components/ScrollButton";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
-      <main className="flex-grow">
+      <main className="w-full">
         <Hero />
-        <About />
-        <Gallery />
-        <TraditionalDayGallery />
-        <Contact />
+        <div className="bg-gradient-to-b from-white to-gray-50">
+          <About />
+          <SchoolEnvironmentGallery />
+          <Gallery />
+          <TraditionalDayGallery />
+          <Contact />
+        </div>
       </main>
       <WhatsAppButton phoneNumber="0246186629" />
       <ScrollButton />
