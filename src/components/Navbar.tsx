@@ -40,7 +40,7 @@ const Navbar = () => {
               "font-heading font-semibold transition-all duration-300",
               isScrolled ? "text-white text-lg drop-shadow-md" : "text-white text-xl drop-shadow-md",
             )}>
-              Golden Gate <span className="text-school-yellow">Int. School</span>
+              Golden Gate <span className="text-school-yellow">Int. School</span> <span className="text-xs">(GOGAINS)</span>
             </span>
             <span className={cn(
               "text-xs font-medium italic transition-all duration-300",

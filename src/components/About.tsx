@@ -125,7 +125,7 @@ const About = () => {
             "text-xl text-gray-700 leading-relaxed transition-all duration-500 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
-            Located in Afrancho, Kumasi in the Ashanti Region of Ghana (P.O. Box AH 2984), Golden Gate Int. School
+            Located in Afrancho, Kumasi in the Ashanti Region of Ghana (P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI), Golden Gate Int. School (GOGAINS)
             is dedicated to transforming education through technology and innovation to prepare students for the digital future.
           </p>
         </div>

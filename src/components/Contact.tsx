@@ -36,7 +36,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const message = `Hello! I have a message for Golden Gate Int. School.\n\nDetails:\nName: ${formData.get('name')}\nEmail: ${formData.get('email')}\nSubject: ${formData.get('subject')}\nMessage: ${formData.get('message')}`;
+    const message = `Hello! I have a message for Golden Gate Int. School (GOGAINS).\n\nDetails:\nName: ${formData.get('name')}\nEmail: ${formData.get('email')}\nSubject: ${formData.get('subject')}\nMessage: ${formData.get('message')}`;
     const whatsappUrl = `https://wa.me/233246186629?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
@@ -109,7 +109,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-school-yellow drop-shadow-sm">Location</h4>
-                    <p className="text-white/80 mt-1">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. Box AH 2984</p>
+                    <p className="text-white/80 mt-1">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI</p>
                   </div>
                 </div>
 
@@ -135,7 +135,7 @@ const Contact = () => {
                   <div className="min-w-0">
                     <h4 className="text-lg font-medium text-school-yellow drop-shadow-sm">Email</h4>
                     <p className="text-white/80 mt-1 break-all font-medium">
-                      goldengateintschool@gmail.com
+                      goldengatesch@yahoo.com
                     </p>
                   </div>
                 </div>

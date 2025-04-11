@@ -21,7 +21,7 @@ const EnrollNow = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `Hello! I'm interested in enrolling at Golden Gate Int. School.\n\nDetails:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nProgram: ${formData.program}\nAdditional Info: ${formData.message}`;
+    const message = `Hello! I'm interested in enrolling at Golden Gate Int. School (GOGAINS).\n\nDetails:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nProgram: ${formData.program}\nAdditional Info: ${formData.message}`;
     const whatsappUrl = `https://wa.me/233246186629?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

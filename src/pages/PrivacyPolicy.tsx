@@ -104,10 +104,11 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:
               </p>
               <div className="leading-relaxed text-gray-800 pl-4 border-l-4 border-school-seaBlue py-2">
-                Golden Gate Int. School<br />
-                Kodie-Kotokuom, Ashanti Region<br />
+                Golden Gate Int. School (GOGAINS)<br />
+                Afrancho, Kumasi, Ashanti Region<br />
                 Ghana<br />
-                Email: goldengateintschool@gmail.com<br />
+                P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI<br />
+                Email: goldengatesch@yahoo.com<br />
                 Phone: 0246186629
               </div>
             </section>

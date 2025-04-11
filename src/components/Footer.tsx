@@ -27,7 +27,7 @@ const Footer = () => {
                 containerClassName="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30"
               />
               <span className="font-heading font-bold text-xl drop-shadow-md">
-                Golden Gate <span className="text-school-yellow">Int. School</span>
+                Golden Gate <span className="text-school-yellow">Int. School</span> (GOGAINS)
               </span>
               <span className="text-xs font-medium italic text-school-yellow/90 block mt-1">
                 Gateway to Success
@@ -139,7 +139,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-white/80 text-sm group-hover:text-white transition-all duration-300">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. Box AH 2984</span>
+                <span className="text-white/80 text-sm group-hover:text-white transition-all duration-300">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI</span>
               </li>
               <li className="flex items-start space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
@@ -152,7 +152,7 @@ const Footer = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <span className="text-white/90 text-xs sm:text-sm break-all font-medium group-hover:text-white transition-all duration-300">goldengateintschool@gmail.com</span>
+                <span className="text-white/90 text-xs sm:text-sm break-all font-medium group-hover:text-white transition-all duration-300">goldengatesch@yahoo.com</span>
               </li>
             </ul>
           </div>
@@ -171,7 +171,7 @@ const Footer = () => {
         </div>
         <div className="overflow-hidden bg-gradient-to-r from-school-blue/90 to-school-blue/80 py-4 border-t border-school-yellow/30 backdrop-blur-sm">
           <div className="animate-scrolling-text whitespace-nowrap text-6xl font-bold text-white drop-shadow-lg">
-            <span className="text-school-yellow">Gateway to Success</span> — Golden Gate Int. School — Technology-Driven Education — Building Tomorrow's IT Leaders
+            <span className="text-school-yellow">Gateway to Success</span> — Golden Gate Int. School (GOGAINS) — Technology-Driven Education — Building Tomorrow's IT Leaders
           </div>
         </div>
       </div>
