@@ -135,7 +135,8 @@ const SchoolEnvironmentGallery = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {galleryImages.map((image, index) => (
                 <CarouselItem key={image.id} className="pl-2 md:pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="group overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-all duration-500 aspect-[4/3] h-full">
+                  <div className="group overflow-hidden rounded-2xl transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 aspect-[4/3] h-full cursor-pointer">
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 z-20 transition-all duration-500 pointer-events-none"></div>
                     <div className="relative h-full">
                       {/* Decorative frame */}
                       <div className="absolute -inset-1 bg-gradient-to-br from-school-blue/30 via-school-yellow/20 to-school-blue/30 rounded-[30px_20px_40px_25px] transform rotate-2 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
@@ -146,11 +147,11 @@ const SchoolEnvironmentGallery = () => {
                           <ImageWithLoader
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            containerClassName="w-full h-full"
+                            className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125"
+                            containerClassName="w-full h-full overflow-hidden"
                           />
                         </div>
-                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30">
+                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                           <p className="text-white font-medium drop-shadow-md text-xs sm:text-sm">{image.alt}</p>
                         </div>
                       </div>
