@@ -14,7 +14,7 @@ const GoldenResources = () => {
       id: 'bece',
       title: 'BECE PASCO',
       description: 'Comprehensive BECE past questions and solutions to help students prepare for their Basic Education Certificate Examination.',
-      image: 'https://ik.imagekit.io/edhumbling/golden%20gate/bece-pasco.jpg',
+      image: 'https://images.unsplash.com/photo-1544507888-56d73eb6046e?q=80&w=1470&auto=format&fit=crop',
       url: 'https://emmadeeofficial.gumroad.com/l/becepasco',
       icon: <FileText className="h-8 w-8 text-school-yellow" />,
       implementation: 'Our teachers incorporate BECE PASCO into regular revision sessions, helping students understand question patterns and develop effective answering techniques. Weekly practice sessions are organized to build confidence and exam readiness.'
@@ -23,7 +23,7 @@ const GoldenResources = () => {
       id: 'jhs',
       title: 'JHS Mocks',
       description: 'Mock examination papers designed to simulate the actual BECE experience, helping students assess their preparation level.',
-      image: 'https://ik.imagekit.io/edhumbling/golden%20gate/jhs-mocks.jpg',
+      image: 'https://images.unsplash.com/photo-1522661067900-ab829854a57f?q=80&w=1470&auto=format&fit=crop',
       url: 'https://emmadeeofficial.gumroad.com/l/jhsmocks',
       icon: <GraduationCap className="h-8 w-8 text-school-yellow" />,
       implementation: 'Golden Gate conducts monthly mock examinations using these resources, providing detailed feedback and personalized improvement plans. Results are analyzed to identify knowledge gaps and strengthen weak areas.'
@@ -32,7 +32,7 @@ const GoldenResources = () => {
       id: 'kiddle',
       title: 'Kids Encyclopedia',
       description: 'A safe, kid-friendly search engine and encyclopedia designed specifically for children to explore and learn about the world.',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1422&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=1473&auto=format&fit=crop',
       url: 'https://kids.kiddle.co/',
       icon: <Globe className="h-8 w-8 text-school-yellow" />,
       implementation: 'Our computer labs feature Kiddle as the default search engine, encouraging safe research habits. Teachers assign guided research projects that utilize this resource for age-appropriate content discovery.'
@@ -41,7 +41,7 @@ const GoldenResources = () => {
       id: 'gutenberg',
       title: 'KG-P6 Learning Resources',
       description: 'A vast collection of free e-books and educational materials for kindergarten through primary school students.',
-      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1373&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=1472&auto=format&fit=crop',
       url: 'https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/browse.html',
       icon: <BookMarked className="h-8 w-8 text-school-yellow" />,
       implementation: 'Our digital library program incorporates these resources into daily reading sessions. Students have scheduled access to tablets and computers to explore age-appropriate e-books that complement their curriculum.'
@@ -50,7 +50,7 @@ const GoldenResources = () => {
       id: 'poetry',
       title: 'Poetry Archive',
       description: 'A collection of recordings of poets reading their own work, helping students experience poetry as a spoken art form.',
-      image: 'https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1470&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1567057419565-4349c49d8a04?q=80&w=1374&auto=format&fit=crop',
       url: 'https://childrens.poetryarchive.org/',
       icon: <Headphones className="h-8 w-8 text-school-yellow" />,
       implementation: 'Weekly poetry sessions in our language arts program utilize these audio resources to improve pronunciation, rhythm, and appreciation of literary works. Students create their own poetry inspired by what they hear.'
@@ -72,7 +72,7 @@ const GoldenResources = () => {
           >
             <div className="rounded-xl overflow-hidden shadow-lg">
               <ImageWithLoader
-                src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1470&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?q=80&w=1470&auto=format&fit=crop"
                 alt="Digital Learning Resources"
                 className="w-full h-64 object-cover"
               />
