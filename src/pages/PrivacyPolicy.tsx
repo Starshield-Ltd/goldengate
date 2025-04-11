@@ -10,15 +10,15 @@ const PrivacyPolicy = () => {
       <main className="flex-1 pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy</h1>
-          
+
           <div className="prose prose-lg max-w-none space-y-8">
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Introduction</h2>
               <p className="leading-relaxed text-gray-800">
-                At Serwaa Akoto Academy, we respect the privacy of our students, parents, staff, and visitors to our school and website. This Privacy Policy outlines how we collect, use, store, and protect your personal information in accordance with the Ghana Data Protection Act, 2012 (Act 843).
+                At Golden Gate Int. School, we respect the privacy of our students, parents, staff, and visitors to our school and website. This Privacy Policy outlines how we collect, use, store, and protect your personal information in accordance with the Ghana Data Protection Act, 2012 (Act 843).
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Information We Collect</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
                 <li className="pl-2">Photographs and videos for school documentation and promotional materials (with consent)</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">How We Use Your Information</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -49,14 +49,14 @@ const PrivacyPolicy = () => {
                 <li className="pl-2">To maintain historical records of student achievement</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Data Protection</h2>
               <p className="leading-relaxed text-gray-800">
                 We are committed to ensuring that your personal information is secure. We have implemented appropriate physical, electronic, and managerial procedures to safeguard the information we collect.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Data Sharing</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
                 <li className="pl-2">Third-party service providers who help us operate our school (these providers are bound by contractual obligations to keep personal information confidential)</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Your Rights</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -83,32 +83,32 @@ const PrivacyPolicy = () => {
                 <li className="pl-2">Withdraw consent where processing is based on consent</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Cookies and Website Usage</h2>
               <p className="leading-relaxed text-gray-800">
                 Our website may use cookies to enhance your browsing experience. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Changes to This Policy</h2>
               <p className="leading-relaxed text-gray-800">
                 We may update this Privacy Policy from time to time. Any changes will be posted on our website, and significant changes will be communicated directly to parents/guardians.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Contact Us</h2>
               <p className="leading-relaxed text-gray-800 mb-2">
                 If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:
               </p>
               <div className="leading-relaxed text-gray-800 pl-4 border-l-4 border-school-seaBlue py-2">
-                Serwaa Akoto Academy<br />
+                Golden Gate Int. School<br />
                 Kodie-Kotokuom, Ashanti Region<br />
                 Ghana<br />
-                Email: serwaaakotoacademygh@gmail.com<br />
-                Phone: +233 54 779 8816
+                Email: goldengateintschool@gmail.com<br />
+                Phone: 0246186629
               </div>
             </section>
           </div>

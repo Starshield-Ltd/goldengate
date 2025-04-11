@@ -65,9 +65,17 @@ export default {
 				},
         // School colors
         school: {
-          seaBlue: '#3A97D4', 
-          green: '#4CAF50',
-          yellow: '#FFD54F',
+          blue: '#1E88E5', // Vibrant blue
+          lightBlue: '#64B5F6', // Light blue for gradients
+          yellow: '#FFC107', // Vibrant yellow
+          lightYellow: '#FFE082', // Light yellow for gradients
+          accent: '#FF9800', // Orange accent for highlights
+        },
+        gradient: {
+          blueYellow: 'linear-gradient(135deg, #1E88E5 0%, #FFC107 100%)',
+          yellowBlue: 'linear-gradient(135deg, #FFC107 0%, #1E88E5 100%)',
+          blueLight: 'linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%)',
+          yellowLight: 'linear-gradient(135deg, #FFC107 0%, #FFE082 100%)',
         },
 			},
 			borderRadius: {

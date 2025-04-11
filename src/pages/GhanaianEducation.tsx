@@ -12,21 +12,21 @@ const GhanaianEducation = () => {
       <main className="flex-1 pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h1 className="text-3xl font-bold mb-8 text-center">Ghanaian Education System</h1>
-          
-          <Splite 
-            title="Ghana's Educational Structure" 
+
+          <Splite
+            title="Ghana's Educational Structure"
             subtitle="Understanding the Foundation"
-            description="The Ghanaian education system has evolved significantly since independence, with reforms aimed at creating a comprehensive structure that addresses the needs of all Ghanaian children. At Serwaa Akoto Academy, we follow this established structure while incorporating innovative teaching methodologies."
+            description="The Ghanaian education system has evolved significantly since independence, with reforms aimed at creating a comprehensive structure that addresses the needs of all Ghanaian children. At Golden Gate Int. School, we follow this established structure while incorporating innovative teaching methodologies."
           >
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <ImageWithLoader 
-                src="/images/school-activities.jpg" 
-                alt="Ghanaian education system" 
+              <ImageWithLoader
+                src="/images/school-activities.jpg"
+                alt="Ghanaian education system"
                 className="w-full h-64 object-cover"
               />
             </div>
           </Splite>
-          
+
           <div className="prose prose-lg max-w-none mt-12 space-y-8">
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Overview of the Ghanaian Education System</h2>
@@ -34,7 +34,7 @@ const GhanaianEducation = () => {
                 Ghana's education system is structured into three main levels: Basic Education, Secondary Education, and Tertiary Education. The Ministry of Education and the Ghana Education Service oversee the implementation of educational policies and curriculum development.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-school-seaBlue">Basic Education</h3>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -46,12 +46,12 @@ const GhanaianEducation = () => {
                 <li className="pl-2"><strong className="text-school-seaBlue">Primary School (6 years)</strong>: From Primary 1 to Primary 6, for children aged 6-12.</li>
                 <li className="pl-2"><strong className="text-school-seaBlue">Junior High School (3 years)</strong>: From JHS 1 to JHS 3, for students aged 12-15.</li>
               </ul>
-              
+
               <p className="leading-relaxed text-gray-800 mt-4">
                 At the end of JHS 3, students take the Basic Education Certificate Examination (BECE), which determines their eligibility for Senior High School.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-school-seaBlue">Secondary Education</h3>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -60,12 +60,12 @@ const GhanaianEducation = () => {
               <ul className="space-y-3 list-disc pl-6 text-gray-800">
                 <li className="pl-2"><strong className="text-school-seaBlue">Senior High School (3 years)</strong>: Offers programs in General Arts, Business, Home Economics, Visual Arts, General Science, and Technical/Vocational studies.</li>
               </ul>
-              
+
               <p className="leading-relaxed text-gray-800 mt-4">
                 Students complete their secondary education by taking the West African Senior School Certificate Examination (WASSCE).
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-school-seaBlue">Tertiary Education</h3>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -78,7 +78,7 @@ const GhanaianEducation = () => {
                 <li className="pl-2">Professional Institutes</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">The Ghanaian Curriculum</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -91,12 +91,12 @@ const GhanaianEducation = () => {
                 <li className="pl-2">Social studies and religious and moral education</li>
                 <li className="pl-2">Career technology and physical education</li>
               </ul>
-              
+
               <p className="leading-relaxed text-gray-800 mt-4">
                 The curriculum aims to develop critical thinking, problem-solving skills, creativity, and civic responsibility among students.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Language Policy</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -108,7 +108,7 @@ const GhanaianEducation = () => {
                 <li className="pl-2">Ghanaian languages are taught as subjects throughout basic education</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Challenges in Ghanaian Education</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -123,11 +123,11 @@ const GhanaianEducation = () => {
                 <li className="pl-2">Access issues for children with disabilities</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">How Serwaa Akoto Academy Builds Upon the Ghanaian Education System</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">How Golden Gate Int. School Builds Upon the Ghanaian Education System</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
-                At Serwaa Akoto Academy, we follow the Ghanaian curriculum while enhancing it in the following ways:
+                At Golden Gate Int. School, we follow the Ghanaian curriculum while enhancing it in the following ways:
               </p>
               <ul className="space-y-3 list-disc pl-6 text-gray-800">
                 <li className="pl-2"><strong className="text-school-seaBlue">Holistic Education</strong>: We focus on the intellectual, social, emotional, and physical development of each child.</li>
@@ -140,14 +140,14 @@ const GhanaianEducation = () => {
                 <li className="pl-2"><strong className="text-school-seaBlue">Community Engagement</strong>: We involve parents and the community in the educational process.</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Our Commitment</h2>
               <p className="leading-relaxed text-gray-800">
-                Serwaa Akoto Academy is committed to providing quality education that adheres to the Ghana Education Service standards while addressing the unique needs of each student. We prepare our students not only to excel academically but also to become responsible citizens who contribute positively to society.
+                Golden Gate Int. School is committed to providing quality education that adheres to the Ghana Education Service standards while addressing the unique needs of each student. We prepare our students not only to excel academically but also to become responsible citizens who contribute positively to society.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Educational Resources</h2>
               <p className="leading-relaxed text-gray-800 mb-4">

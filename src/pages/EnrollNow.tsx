@@ -19,8 +19,8 @@ const EnrollNow = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `Hello! I'm interested in enrolling at Serwaa Koto Academy.\n\nDetails:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nProgram: ${formData.program}\nAdditional Info: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/233547798816?text=${encodeURIComponent(message)}`;
+    const message = `Hello! I'm interested in enrolling at Golden Gate Int. School.\n\nDetails:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nProgram: ${formData.program}\nAdditional Info: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/233246186629?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -30,7 +30,7 @@ const EnrollNow = () => {
         <h1 className="text-4xl font-extrabold text-center text-indigo-900 mb-8">Begin Your Journey</h1>
         <div className="bg-white shadow-xl rounded-2xl p-8 space-y-6 border border-indigo-100">
           <p className="text-gray-600 text-lg text-center mb-8">
-            Take the first step towards excellence at Serwaa Koto Academy. Fill out this form and we'll connect with you via WhatsApp.
+            Take the first step towards excellence at Golden Gate Int. School. Fill out this form and we'll connect with you via WhatsApp.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>

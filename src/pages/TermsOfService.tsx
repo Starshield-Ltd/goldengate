@@ -10,36 +10,36 @@ const TermsOfService = () => {
       <main className="flex-1 pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h1 className="text-3xl font-bold mb-8 text-center">Terms of Service</h1>
-          
+
           <div className="prose prose-lg max-w-none space-y-8">
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Introduction</h2>
               <p className="leading-relaxed text-gray-800">
-                Welcome to Serwaa Akoto Academy. These Terms of Service govern your relationship with our school and the use of our services. By enrolling your child in our institution or using our website, you agree to these terms.
+                Welcome to Golden Gate Int. School. These Terms of Service govern your relationship with our school and the use of our services. By enrolling your child in our institution or using our website, you agree to these terms.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Educational Services</h2>
               <p className="leading-relaxed text-gray-800">
-                Serwaa Akoto Academy provides educational services from Creche to Junior High School following the Ghana Education Service curriculum and guidelines. We are committed to maintaining high educational standards and creating a nurturing learning environment for all students.
+                Golden Gate Int. School provides educational services from Creche to Junior High School following the Ghana Education Service curriculum and guidelines. We are committed to maintaining high educational standards and creating a nurturing learning environment for all students.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Enrollment and Admission</h2>
               <p className="leading-relaxed text-gray-800">
                 Enrollment is subject to available space, meeting age requirements, and submission of all required documentation. The school reserves the right to make final decisions regarding admission and placement of students in appropriate classes.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Fee Payment</h2>
               <p className="leading-relaxed text-gray-800">
                 School fees must be paid according to the schedule provided at the beginning of each academic year. Late payments may incur additional charges, and the school reserves the right to refuse attendance if fees remain unpaid after multiple reminders.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Attendance and Conduct</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -53,7 +53,7 @@ const TermsOfService = () => {
                 <li className="pl-2">Treat staff and fellow students with respect</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Parental Responsibilities</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -68,21 +68,21 @@ const TermsOfService = () => {
                 <li className="pl-2">Respect school policies and procedures</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Health and Safety</h2>
               <p className="leading-relaxed text-gray-800">
                 The school prioritizes the health and safety of all students. Parents must inform the school of any medical conditions or special needs. Students should not attend school when ill, particularly if they have contagious conditions.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Photography and Media</h2>
               <p className="leading-relaxed text-gray-800">
                 The school may take photographs or videos of students for educational purposes, school records, and promotional materials. Parents have the right to opt out by submitting a written request.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Website Usage</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -95,7 +95,7 @@ const TermsOfService = () => {
                 <li className="pl-2">Upload viruses or malicious code</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Termination of Enrollment</h2>
               <p className="leading-relaxed text-gray-800 mb-4">
@@ -108,32 +108,32 @@ const TermsOfService = () => {
                 <li className="pl-2">There is a breakdown in the relationship between the school and parents</li>
               </ul>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Changes to Terms</h2>
               <p className="leading-relaxed text-gray-800">
                 The school may modify these terms from time to time. Significant changes will be communicated to parents through official channels.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Governing Law</h2>
               <p className="leading-relaxed text-gray-800">
                 These Terms of Service are governed by the laws of Ghana.
               </p>
             </section>
-            
+
             <section className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-semibold mb-4 text-school-seaBlue">Contact Us</h2>
               <p className="leading-relaxed text-gray-800 mb-2">
                 If you have questions about these Terms of Service, please contact us at:
               </p>
               <div className="leading-relaxed text-gray-800 pl-4 border-l-4 border-school-seaBlue py-2">
-                Serwaa Akoto Academy<br />
+                Golden Gate Int. School<br />
                 Kodie-Kotokuom, Ashanti Region<br />
                 Ghana<br />
-                Email: serwaaakotoacademygh@gmail.com<br />
-                Phone: +233 54 779 8816
+                Email: goldengateintschool@gmail.com<br />
+                Phone: 0246186629
               </div>
             </section>
           </div>

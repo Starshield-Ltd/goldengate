@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 201 64% 53%;
+    --primary: 210 79% 51%; /* Blue */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 100% 51%; /* Yellow */
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 36 100% 50%; /* Orange accent */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,18 +33,18 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 210 79% 51%;
 
-    --radius: 0.75rem;
+    --radius: 1rem; /* Increased border radius for more modern look */
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 79% 51%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 45 100% 51%;
+    --sidebar-primary-foreground: 0 0% 20%;
+    --sidebar-accent: 36 100% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 79% 40%;
+    --sidebar-ring: 45 100% 51%;
   }
 
   * {
@@ -68,11 +68,23 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg;
+    @apply backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl;
   }
 
   .glass-dark {
-    @apply backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg;
+    @apply backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg rounded-2xl;
+  }
+
+  .glass-blue {
+    @apply backdrop-blur-lg bg-school-blue/20 border border-school-blue/30 shadow-lg rounded-2xl;
+  }
+
+  .glass-yellow {
+    @apply backdrop-blur-lg bg-school-yellow/20 border border-school-yellow/30 shadow-lg rounded-2xl;
+  }
+
+  .glass-gradient {
+    @apply backdrop-blur-lg bg-gradient-to-br from-school-blue/20 to-school-yellow/20 border border-white/20 shadow-lg rounded-2xl;
   }
 
   .section-padding {
@@ -84,18 +96,18 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium shadow transition-colors 
-    bg-school-seaBlue text-white hover:bg-school-seaBlue/90 focus:outline-none focus:ring-2 focus:ring-school-seaBlue focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
+    bg-gradient-to-r from-school-blue to-school-lightBlue text-white hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-blue focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-school-seaBlue shadow-sm 
-    hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-school-seaBlue focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
+    bg-gradient-to-r from-school-yellow to-school-lightYellow text-gray-800 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-school-yellow focus:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-md border border-school-seaBlue px-4 py-2 text-sm font-medium text-school-seaBlue shadow-sm 
-    hover:bg-school-seaBlue/10 focus:outline-none focus:ring-2 focus:ring-school-seaBlue focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-white/80 px-5 py-3 text-sm font-medium shadow-lg transition-all duration-300
+    backdrop-blur-sm bg-white/10 text-white hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
   }
 
   /* Card stylings */
@@ -152,17 +164,17 @@
 }
 
 .whatsapp-btn {
-  @apply fixed bottom-6 right-6 z-50 bg-[#25D366] rounded-full p-4 shadow-lg transition-transform 
+  @apply fixed bottom-6 right-6 z-50 bg-[#25D366] rounded-full p-4 shadow-lg transition-transform
   hover:scale-110 animate-float;
 }
 
 /* Navbar styles */
 .nav-link {
-  @apply relative text-gray-800 hover:text-school-seaBlue transition-colors duration-300 px-3 py-2 text-sm font-medium;
+  @apply relative text-gray-800 hover:text-school-blue transition-colors duration-300 px-3 py-2 text-sm font-medium;
 }
 
 .nav-link::after {
-  @apply content-[''] absolute left-0 bottom-0 h-[2px] w-0 bg-school-seaBlue transition-all duration-300;
+  @apply content-[''] absolute left-0 bottom-0 h-[3px] w-0 bg-gradient-to-r from-school-blue to-school-yellow transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -178,19 +190,19 @@
   html {
     font-size: 15px;
   }
-  
+
   h1, h2, h3 {
     word-break: break-word;
     hyphens: auto;
   }
-  
+
   p, span, a, li {
     max-width: 100%;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
   }
-  
+
   .content-container {
     @apply px-3;
   }
