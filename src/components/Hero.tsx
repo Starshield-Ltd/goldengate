@@ -64,7 +64,7 @@ const Hero = () => {
               Golden Gate <span className="text-school-yellow drop-shadow-md">Int. School</span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-10 max-w-lg font-light drop-shadow-md">
-              Providing inclusive and equitable quality formal education from Creche to Junior High School in Kodie-Kotokuom, Ashanti Region.
+              Transforming education through technology and innovation at our Afrancho, Kumasi campus, preparing the next generation of IT leaders and digital innovators.
             </p>
             <div className="flex flex-wrap gap-6">
               <a href="#about" className="btn-secondary">
@@ -93,7 +93,7 @@ const Hero = () => {
             <div className="absolute -bottom-6 -left-6 glass-gradient rounded-2xl overflow-hidden shadow-2xl -rotate-3 transform hover:rotate-0 transition-all duration-500 w-48 h-48 z-20 border-2 border-white/30">
               <div className="p-4 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/70 to-school-yellow/70 h-full flex flex-col justify-center items-center">
                 <h3 className="text-lg font-semibold mb-2 drop-shadow-md">Our Mission</h3>
-                <p className="text-sm drop-shadow-md">Quality education for all children</p>
+                <p className="text-sm drop-shadow-md">Creating future-ready IT professionals</p>
               </div>
             </div>
           </div>

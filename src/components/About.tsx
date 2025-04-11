@@ -83,8 +83,8 @@ const About = () => {
             "text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
-            Located in Kodie-Kotokuom in the Ashanti Region of Ghana, Golden Gate Int. School
-            is dedicated to providing quality education that prepares students for the future.
+            Located in Afrancho, Kumasi in the Ashanti Region of Ghana (P.O. Box AH 2984), Golden Gate Int. School
+            is dedicated to transforming education through technology and innovation to prepare students for the digital future.
           </p>
         </div>
 
@@ -115,8 +115,8 @@ const About = () => {
 
             <div className="absolute -bottom-6 -left-6 glass-yellow p-4 rounded-xl shadow-lg -rotate-3 transform hover:rotate-0 transition-all duration-300 border border-white/30 z-20">
               <div className="text-white">
-                <p className="font-heading text-lg font-semibold drop-shadow-md">Kodie-Kotokuom</p>
-                <p className="text-xs drop-shadow-sm">Ashanti Region, Ghana</p>
+                <p className="font-heading text-lg font-semibold drop-shadow-md">Afrancho, Kumasi</p>
+                <p className="text-xs drop-shadow-sm">P.O. Box AH 2984, Ghana</p>
               </div>
             </div>
 
@@ -192,9 +192,9 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                To ensure that all children of school going age are provided with inclusive and
-                equitable quality formal education and training through effective and efficient
-                management of resources to make education delivery relevant to the manpower needs of the nation.
+                To revolutionize education by integrating cutting-edge technology and innovative teaching methodologies,
+                empowering students to become future-ready information technology professionals and digital leaders who will
+                transform Ghana's technological landscape and compete on the global stage.
               </p>
             </div>
 
@@ -205,10 +205,38 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                Golden Gate Int. School seeks to create an enabling environment in all education institutions
-                and management positions that will facilitate effective teaching and learning
-                and efficiency in the management for the attainment of the goals of the service.
+                To be Ghana's premier technology-focused educational institution, nurturing a new generation of
+                innovative thinkers, digital creators, and tech entrepreneurs who will lead Africa's digital revolution
+                and shape the future of global technology with a distinctly African perspective.
               </p>
+            </div>
+
+            {/* Core Values */}
+            <div className="glass-blue rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/30 mt-8">
+              <h3 className="text-xl font-bold font-heading text-white mb-4 flex items-center drop-shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Our Core Values
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                  <h4 className="text-white font-semibold mb-2">Digital Innovation</h4>
+                  <p className="text-white/80 text-sm">Embracing cutting-edge technology and fostering a culture of innovation in everything we do.</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                  <h4 className="text-white font-semibold mb-2">Future-Focused Learning</h4>
+                  <p className="text-white/80 text-sm">Preparing students for careers that don't yet exist, with skills that transcend traditional education.</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                  <h4 className="text-white font-semibold mb-2">Computational Thinking</h4>
+                  <p className="text-white/80 text-sm">Developing logical reasoning, algorithmic thinking, and problem-solving skills from an early age.</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                  <h4 className="text-white font-semibold mb-2">Global Digital Citizenship</h4>
+                  <p className="text-white/80 text-sm">Nurturing responsible, ethical, and culturally aware digital citizens who can thrive in a connected world.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

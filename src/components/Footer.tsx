@@ -31,7 +31,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-white/80 text-sm backdrop-blur-sm glass-gradient inline-block p-3 rounded-xl">
-              Providing inclusive and equitable quality formal education and training for the future leaders of tomorrow.
+              Transforming education through technology and innovation, creating the next generation of IT leaders and digital innovators for Ghana and beyond.
             </p>
             <div className="pt-2">
               <a
@@ -133,7 +133,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-white/80 text-sm group-hover:text-white transition-all duration-300">Kodie-Kotokuom, Ashanti Region, Ghana</span>
+                <span className="text-white/80 text-sm group-hover:text-white transition-all duration-300">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. Box AH 2984</span>
               </li>
               <li className="flex items-start space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
@@ -165,7 +165,7 @@ const Footer = () => {
         </div>
         <div className="overflow-hidden bg-gradient-to-r from-school-yellow/80 to-school-blue/80 py-4 border-t border-white/20 backdrop-blur-sm">
           <div className="animate-scrolling-text whitespace-nowrap text-6xl font-bold text-white drop-shadow-lg">
-            Golden Gate Int. School — Excellence in Education — Nurturing Future Leaders — Quality Education for All
+            Golden Gate Int. School — Technology-Driven Education — Building Tomorrow's IT Leaders — Digital Innovation for Africa
           </div>
         </div>
       </div>

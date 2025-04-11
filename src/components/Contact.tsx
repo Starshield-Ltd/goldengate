@@ -106,7 +106,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-white drop-shadow-sm">Location</h4>
-                    <p className="text-white/80 mt-1">Kodie-Kotokuom, Ashanti Region, Ghana</p>
+                    <p className="text-white/80 mt-1">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. Box AH 2984</p>
                   </div>
                 </div>
 
