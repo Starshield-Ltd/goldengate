@@ -45,13 +45,13 @@ const About = () => {
       className="section-padding relative overflow-hidden pt-20 md:pt-24"
     >
       {/* Top design images */}
-      <div className="absolute top-0 left-0 w-full h-40 md:h-60 overflow-hidden z-0">
+      <div className="absolute top-0 left-0 w-full h-60 md:h-80 overflow-hidden z-0">
         {/* First design image */}
         <div className="absolute inset-0">
           <ImageWithLoader
-            src="https://ik.imagekit.io/edhumbling/golden%20gate/ChatGPT%20Image%20Apr%2011,%202025,%2006_50_55%20PM.png"
+            src="https://ik.imagekit.io/edhumbling/golden%20gate/ChatGPT%20Image%20Apr%2011,%202025,%2006_50_55%20PM.png?updatedAt=1744397506249"
             alt="Golden Gate Design Banner"
-            className="w-full h-full object-cover opacity-15"
+            className="w-full h-full object-cover opacity-30"
           />
         </div>
 
