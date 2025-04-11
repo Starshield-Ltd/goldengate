@@ -192,19 +192,62 @@
 /* Mobile optimizations */
 @media (max-width: 640px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  h1, h2, h3 {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
     word-break: break-word;
     hyphens: auto;
   }
 
   p, span, a, li {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
     max-width: 100%;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+  }
+
+  .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-lg {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-base {
+    font-size: 0.875rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-sm {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-xs {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
   }
 
   .content-container {
@@ -212,16 +255,21 @@
   }
 
   .section-padding {
-    @apply py-8 px-2;
+    @apply py-6 px-2;
   }
 
   /* Reduce spacing between grid items on mobile */
   .grid {
-    @apply gap-4;
+    @apply gap-3;
   }
 
-  /* Make buttons more touch-friendly */
+  /* Make buttons more touch-friendly but with smaller text */
   .btn-primary, .btn-secondary, .btn-outline {
-    @apply py-3 px-4 text-base;
+    @apply py-2 px-3 text-sm;
+  }
+
+  /* Reduce padding in cards and sections */
+  .card, .glass, .glass-dark, .glass-blue, .glass-yellow, .glass-gradient {
+    @apply p-3;
   }
 }

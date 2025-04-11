@@ -112,7 +112,7 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 relative">
           <h2 className={cn(
-            "text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-500",
+            "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-500",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             About Our School
@@ -122,7 +122,7 @@ const About = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-xl text-gray-700 leading-relaxed transition-all duration-500 delay-200",
+            "text-base sm:text-lg text-gray-700 leading-relaxed transition-all duration-500 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Located in Afrancho, Kumasi in the Ashanti Region of Ghana (P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI), Golden Gate Int. School (GOGAINS)
@@ -138,9 +138,9 @@ const About = () => {
           <div className="glass-dark rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow h-full flex flex-col">
             <div className="flex items-center mb-4 md:mb-6">
               <Target className="w-6 h-6 md:w-8 md:h-8 mr-3 md:mr-4 text-school-yellow" />
-              <h3 className="text-xl md:text-2xl font-bold font-heading text-school-yellow drop-shadow-md">Our Mission</h3>
+              <h3 className="text-lg sm:text-xl md:text-xl font-bold font-heading text-school-yellow drop-shadow-md">Our Mission</h3>
             </div>
-            <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed flex-grow">
+            <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed flex-grow">
               To revolutionize education by integrating cutting-edge technology and innovative teaching methodologies,
               empowering students to become future-ready information technology professionals and digital leaders who will
               transform Ghana's technological landscape and compete on the global stage.
@@ -150,9 +150,9 @@ const About = () => {
           <div className="glass-dark rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-school-yellow h-full flex flex-col">
             <div className="flex items-center mb-4 md:mb-6">
               <Lightbulb className="w-6 h-6 md:w-8 md:h-8 mr-3 md:mr-4 text-school-yellow" />
-              <h3 className="text-xl md:text-2xl font-bold font-heading text-school-yellow drop-shadow-md">Our Vision</h3>
+              <h3 className="text-lg sm:text-xl md:text-xl font-bold font-heading text-school-yellow drop-shadow-md">Our Vision</h3>
             </div>
-            <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed flex-grow">
+            <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed flex-grow">
               To be Ghana's premier technology-focused educational institution, nurturing a new generation of
               innovative thinkers, digital creators, and tech entrepreneurs who will lead Africa's digital revolution
               and shape the future of global technology with a distinctly African perspective.

@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex flex-col">
             <span className={cn(
               "font-heading font-semibold transition-all duration-300",
-              isScrolled ? "text-white text-lg drop-shadow-md" : "text-white text-xl drop-shadow-md",
+              isScrolled ? "text-white text-base drop-shadow-md" : "text-white text-lg drop-shadow-md",
             )}>
               Golden Gate <span className="text-school-yellow">Int. School</span> <span className="text-xs">(GOGAINS)</span>
             </span>
@@ -53,17 +53,17 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
-          <Link to="/" className="nav-link">Home</Link>
-          <a href="#about" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About</a>
-          <a href="#gallery" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
-          <Link to="/ghanaian-education" className="nav-link">Education</Link>
-          <Link to="/stem-resources" className="nav-link">STEM Resources</Link>
-          <Link to="/golden-resources" className="nav-link">Golden Resources</Link>
-          <Link to="/ai-search" className="nav-link">AI Search</Link>
-          <a href="#contact" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
+          <Link to="/" className="nav-link text-xs md:text-sm">Home</Link>
+          <a href="#about" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About</a>
+          <a href="#gallery" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
+          <Link to="/ghanaian-education" className="nav-link text-xs md:text-sm">Education</Link>
+          <Link to="/stem-resources" className="nav-link text-xs md:text-sm">STEM Resources</Link>
+          <Link to="/golden-resources" className="nav-link text-xs md:text-sm">Golden Resources</Link>
+          <Link to="/ai-search" className="nav-link text-xs md:text-sm">AI Search</Link>
+          <a href="#contact" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
           <Link
             to="/enroll-now"
-            className="ml-4 btn-secondary"
+            className="ml-4 btn-secondary text-xs md:text-sm"
           >
             Enroll Now
           </Link>
@@ -99,14 +99,14 @@ const Navbar = () => {
         <nav className="flex flex-col space-y-2 px-4 py-4">
           <Link
             to="/"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <a
             href="#about"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -117,7 +117,7 @@ const Navbar = () => {
           </a>
           <a
             href="#gallery"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
@@ -128,35 +128,35 @@ const Navbar = () => {
           </a>
           <Link
             to="/ghanaian-education"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             Education
           </Link>
           <Link
             to="/stem-resources"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             STEM Resources
           </Link>
           <Link
             to="/golden-resources"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             Golden Resources
           </Link>
           <Link
             to="/ai-search"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             AI Search
           </Link>
           <a
             href="#contact"
-            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
             onClick={(e) => {
               e.preventDefault();
               setIsMenuOpen(false);
@@ -167,7 +167,7 @@ const Navbar = () => {
           </a>
           <Link
             to="/enroll-now"
-            className="px-4 py-2 bg-white text-school-blue font-semibold rounded-md hover:bg-white/90 transition-all duration-300"
+            className="px-3 py-1.5 bg-white text-school-blue font-semibold rounded-md hover:bg-white/90 transition-all duration-300 text-xs"
             onClick={() => setIsMenuOpen(false)}
           >
             Enroll Now

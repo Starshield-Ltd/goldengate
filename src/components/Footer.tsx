@@ -60,31 +60,31 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4 font-heading drop-shadow-md">Quick Links</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 font-heading drop-shadow-md">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Home</Link>
+                <Link to="/" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Home</Link>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About Us</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About Us</a>
               </li>
               <li>
-                <a href="#gallery" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
+                <a href="#gallery" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
               </li>
               <li>
-                <Link to="/ghanaian-education" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Education</Link>
+                <Link to="/ghanaian-education" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Education</Link>
               </li>
               <li>
-                <Link to="/stem-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">STEM Resources</Link>
+                <Link to="/stem-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">STEM Resources</Link>
               </li>
               <li>
-                <Link to="/golden-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Golden Resources</Link>
+                <Link to="/golden-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Golden Resources</Link>
               </li>
               <li>
-                <Link to="/ai-search" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">AI Search</Link>
+                <Link to="/ai-search" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">AI Search</Link>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
+                <a href="#contact" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
               </li>
               <li>
                 <a href="#contact" className="fixed bottom-8 right-8 w-12 h-12 rounded-full backdrop-blur-sm bg-gradient-to-r from-school-blue/70 to-school-yellow/70 border border-white/20 flex items-center justify-center group hover:scale-110 transition-all duration-300 shadow-lg" onClick={(e) => {
@@ -115,43 +115,43 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4 font-heading drop-shadow-md">Programs</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 font-heading drop-shadow-md">Programs</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Creche</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Creche</a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Nursery</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Nursery</a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Kindergarten</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Kindergarten</a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Primary Education</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Primary Education</a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Junior High School</a>
+                <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>Junior High School</a>
               </li>
               <li>
-                <Link to="/enroll-now" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Enroll Now</Link>
+                <Link to="/enroll-now" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Enroll Now</Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4 font-heading drop-shadow-md">Contact Info</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 font-heading drop-shadow-md">Contact Info</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-white/80 text-sm group-hover:text-white transition-all duration-300">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI</span>
+                <span className="text-white/80 text-xs sm:text-sm group-hover:text-white transition-all duration-300">Afrancho, Kumasi, Ashanti Region, Ghana<br/>P.O. BOX HN 2984, ASHANTI NEW TOWN, KUMASI</span>
               </li>
               <li className="flex items-start space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="text-white/90 text-sm font-medium group-hover:text-white transition-all duration-300">+233 246186629</span>
+                <span className="text-white/90 text-xs sm:text-sm font-medium group-hover:text-white transition-all duration-300">+233 246186629</span>
               </li>
               <li className="flex items-start space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white/80 mt-0.5 group-hover:text-white transition-all duration-300" viewBox="0 0 20 20" fill="currentColor">
@@ -167,22 +167,22 @@ const Footer = () => {
 
       <div className="border-t border-school-yellow/30">
         <div className="content-container py-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-white/80 text-sm mb-4 md:mb-0 font-medium">
+          <div className="text-white/80 text-xs sm:text-sm mb-4 md:mb-0 font-medium">
             &copy; {currentYear} Golden Gate Int. School. All rights reserved.
           </div>
-          <div className="flex items-center space-x-6 text-sm text-white/80">
+          <div className="flex items-center space-x-6 text-xs sm:text-sm text-white/80">
             <Link to="/privacy" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Terms of Service</Link>
           </div>
         </div>
         <div className="overflow-hidden bg-gradient-to-r from-school-blue/90 to-school-blue/80 py-4 border-t border-school-yellow/30 backdrop-blur-sm">
-          <div className="animate-scrolling-text whitespace-nowrap text-6xl font-bold text-white drop-shadow-lg">
+          <div className="animate-scrolling-text whitespace-nowrap text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
             <span className="text-school-yellow">Gateway to Success</span> — Golden Gate Int. School (GOGAINS) — Technology-Driven Education — Building Tomorrow's IT Leaders
           </div>
         </div>
       </div>
 
-      <div className="py-3 text-center text-xs text-white/70 border-t border-school-yellow/30">
+      <div className="py-3 text-center text-[10px] sm:text-xs text-white/70 border-t border-school-yellow/30">
         Made by <a
           href="https://linkedin.com/in/edhumbling"
           target="_blank"

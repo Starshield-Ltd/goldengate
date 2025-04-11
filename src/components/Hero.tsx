@@ -62,23 +62,23 @@ const Hero = () => {
             "text-white max-w-xl transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-4 leading-tight text-white drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-4 leading-tight text-white drop-shadow-lg">
               Golden Gate <span className="text-school-yellow drop-shadow-md">Int. School</span>
             </h1>
-            <p className="text-2xl md:text-3xl italic text-school-yellow mb-6 font-medium drop-shadow-md">
+            <p className="text-xl sm:text-2xl md:text-2xl italic text-school-yellow mb-4 font-medium drop-shadow-md">
               Gateway to Success
             </p>
-            <p className="text-xl md:text-2xl text-white mb-10 max-w-lg font-light drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl text-white mb-6 max-w-lg font-light drop-shadow-md">
               Transforming education through technology and innovation at our Afrancho, Kumasi campus, preparing the next generation of IT leaders and digital innovators.
             </p>
             <div className="flex flex-wrap gap-6">
-              <a href="#about" className="btn-secondary">
+              <a href="#about" className="btn-secondary text-xs sm:text-sm">
                 Discover More
               </a>
-              <a href="#contact" className="btn-outline">
+              <a href="#contact" className="btn-outline text-xs sm:text-sm">
                 Contact Us
               </a>
-              <a href="/ai-search" className="btn-primary flex items-center gap-2">
+              <a href="/ai-search" className="btn-primary flex items-center gap-2 text-xs sm:text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clipRule="evenodd" />
                 </svg>
@@ -107,8 +107,8 @@ const Hero = () => {
             </div>
             <div className="absolute -bottom-6 -left-6 glass-dark rounded-2xl overflow-hidden shadow-2xl -rotate-3 transform hover:rotate-0 transition-all duration-500 w-48 h-48 z-20 border-2 border-school-yellow">
               <div className="p-4 text-white backdrop-blur-md bg-gradient-to-br from-school-blue/90 to-school-blue/80 h-full flex flex-col justify-center items-center">
-                <h3 className="text-lg font-semibold mb-2 drop-shadow-md text-school-yellow">Our Mission</h3>
-                <p className="text-sm drop-shadow-md">Creating future-ready IT professionals</p>
+                <h3 className="text-sm sm:text-base font-semibold mb-1 drop-shadow-md text-school-yellow">Our Mission</h3>
+                <p className="text-xs sm:text-sm drop-shadow-md">Creating future-ready IT professionals</p>
               </div>
             </div>
           </div>
