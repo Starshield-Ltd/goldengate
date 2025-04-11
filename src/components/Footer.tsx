@@ -21,10 +21,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <ImageWithLoader
-                src="https://ik.imagekit.io/humbling/WhatsApp%20Image%202025-03-24%20at%2012.03.34_91c72f1d.jpg?updatedAt=1742906038933"
+                src="https://ik.imagekit.io/edhumbling/golden%20gate/WhatsApp%20Image%202025-04-11%20at%2016.41.51_a712a956.jpg"
                 alt="Golden Gate Int. School Logo"
                 className="w-10 h-10 rounded-full object-cover"
-                containerClassName="w-10 h-10 rounded-full overflow-hidden bg-white"
+                containerClassName="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30"
               />
               <span className="font-heading font-bold text-xl drop-shadow-md">
                 Golden Gate <span className="text-white/90">Int. School</span>
