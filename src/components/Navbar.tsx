@@ -58,6 +58,7 @@ const Navbar = () => {
           <a href="#gallery" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
           <Link to="/ghanaian-education" className="nav-link">Education</Link>
           <Link to="/stem-resources" className="nav-link">STEM Resources</Link>
+          <Link to="/golden-resources" className="nav-link">Golden Resources</Link>
           <Link to="/ai-search" className="nav-link">AI Search</Link>
           <a href="#contact" className="nav-link" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
           <Link
@@ -138,6 +139,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             STEM Resources
+          </Link>
+          <Link
+            to="/golden-resources"
+            className="px-4 py-2 text-white hover:bg-white/10 rounded-md transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Golden Resources
           </Link>
           <Link
             to="/ai-search"

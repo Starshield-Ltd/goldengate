@@ -78,6 +78,9 @@ const Footer = () => {
                 <Link to="/stem-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">STEM Resources</Link>
               </li>
               <li>
+                <Link to="/golden-resources" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Golden Resources</Link>
+              </li>
+              <li>
                 <Link to="/ai-search" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">AI Search</Link>
               </li>
               <li>
