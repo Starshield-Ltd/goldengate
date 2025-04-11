@@ -84,11 +84,11 @@ const ExcursionGallery = () => {
       <div className="content-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className={cn(
-            "text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-school-blue to-school-green bg-clip-text text-transparent drop-shadow-md transition-all duration-700",
+            "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-school-blue to-school-green bg-clip-text text-transparent drop-shadow-md transition-all duration-700",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             <span className="inline-flex items-center">
-              <Compass className="w-8 h-8 mr-3 text-school-blue" />
+              <Compass className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mr-2 sm:mr-3 text-school-blue" />
               School Excursions
             </span>
           </h2>
@@ -97,7 +97,7 @@ const ExcursionGallery = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
+            "text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Learning extends beyond our classroom walls through exciting educational excursions,
@@ -105,7 +105,7 @@ const ExcursionGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 max-w-6xl mx-auto">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
@@ -127,18 +127,18 @@ const ExcursionGallery = () => {
                     containerClassName="w-full h-full"
                   />
                 </div>
-                
+
                 {/* Overlay with gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-school-blue/80 via-school-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30"></div>
-                
+
                 {/* Caption that slides up */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-school-blue/90 to-transparent z-40 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6 bg-gradient-to-t from-school-blue/90 to-transparent z-40 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-school-yellow flex-shrink-0 mt-1" />
-                    <p className="text-white font-medium drop-shadow-md text-lg">{image.alt}</p>
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-school-yellow flex-shrink-0 mt-0.5 sm:mt-1" />
+                    <p className="text-white font-medium drop-shadow-md text-sm sm:text-base md:text-lg">{image.alt}</p>
                   </div>
                 </div>
-                
+
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-school-yellow/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30 rounded-bl-3xl"></div>
               </div>
@@ -150,7 +150,7 @@ const ExcursionGallery = () => {
           "mt-16 text-center transition-all duration-700 delay-600",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-6 text-sm sm:text-base">
             At Golden Gate Int. School, we believe in providing enriching experiences that complement classroom learning and broaden our students' horizons.
           </p>
           <a

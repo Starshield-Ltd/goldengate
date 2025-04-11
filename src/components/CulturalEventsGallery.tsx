@@ -89,7 +89,7 @@ const CulturalEventsGallery = () => {
       <div className="content-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className={cn(
-            "text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-700",
+            "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-school-blue to-school-yellow bg-clip-text text-transparent drop-shadow-md transition-all duration-700",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             <span className="inline-flex items-center">
@@ -102,7 +102,7 @@ const CulturalEventsGallery = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
+            "text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Celebrating Ghanaian culture and heritage through our annual Traditional Day and March Parade events,
@@ -136,7 +136,7 @@ const CulturalEventsGallery = () => {
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30">
-                  <p className="text-white font-medium drop-shadow-md">{image.alt}</p>
+                  <p className="text-white font-medium drop-shadow-md text-sm sm:text-base">{image.alt}</p>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@ const CulturalEventsGallery = () => {
           "mt-16 text-center transition-all duration-700 delay-600",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-6 text-sm sm:text-base">
             At Golden Gate Int. School, we believe in preserving and celebrating our cultural heritage while preparing students for the future.
           </p>
           <a

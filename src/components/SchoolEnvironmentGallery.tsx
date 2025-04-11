@@ -97,7 +97,7 @@ const SchoolEnvironmentGallery = () => {
       <div className="content-container">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className={cn(
-            "text-3xl md:text-4xl font-bold mb-4 text-gray-900 transition-all duration-300",
+            "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 transition-all duration-300",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             <span className="inline-flex items-center">
@@ -110,7 +110,7 @@ const SchoolEnvironmentGallery = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-gray-600 transition-all duration-300 delay-100",
+            "text-sm sm:text-base text-gray-600 transition-all duration-300 delay-100",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Explore our modern facilities and welcoming campus where students thrive in a safe and stimulating environment.
@@ -151,7 +151,7 @@ const SchoolEnvironmentGallery = () => {
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30">
-                          <p className="text-white font-medium drop-shadow-md text-sm">{image.alt}</p>
+                          <p className="text-white font-medium drop-shadow-md text-xs sm:text-sm">{image.alt}</p>
                         </div>
                       </div>
                     </div>

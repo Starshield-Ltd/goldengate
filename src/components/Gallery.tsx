@@ -89,7 +89,7 @@ const Gallery = () => {
       <div className="content-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className={cn(
-            "text-3xl md:text-4xl font-bold mb-4 text-gray-900 transition-all duration-700",
+            "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 transition-all duration-700",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             <span className="inline-flex items-center">
@@ -102,7 +102,7 @@ const Gallery = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
           )}></div>
           <p className={cn(
-            "text-gray-600 transition-all duration-700 delay-200",
+            "text-sm sm:text-base text-gray-600 transition-all duration-700 delay-200",
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           )}>
             Take a glimpse into the joyful learning environment at Golden Gate Int. School,
@@ -137,7 +137,7 @@ const Gallery = () => {
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-school-blue/80 to-transparent z-30">
-                    <p className="text-white font-medium drop-shadow-md">{image.alt}</p>
+                    <p className="text-white font-medium drop-shadow-md text-xs sm:text-sm md:text-base">{image.alt}</p>
                   </div>
                 </div>
               </div>
@@ -149,7 +149,7 @@ const Gallery = () => {
           "mt-16 text-center transition-all duration-700 delay-600",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-6 text-sm sm:text-base">
             Experience the vibrant community and educational excellence at Golden Gate Int. School.
           </p>
           <a
