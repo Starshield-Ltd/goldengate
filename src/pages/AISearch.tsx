@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const AISearch = () => {
   const tools = [
-    { id: 'exa', name: 'Exa AI Chat', url: 'https://chat.exa.ai/', description: 'Advanced AI chat with web search capabilities for accurate, up-to-date information and research assistance.' },
+    { id: 'exa', name: 'Exa AI Chat', url: '/ai-search/exa-ai', description: 'Advanced AI chat with web search capabilities for accurate, up-to-date information and research assistance.' },
     { id: 'index', name: 'Index.Globe', url: '/ai-search/index-globe', description: 'Access the full Index.Globe platform to enhance your research and learning.' },
     { id: 'farfalle', name: 'Farfalle', url: '/ai-search/farfalle', description: 'Access the full Farfalle platform to enhance your research and learning.' },
     { id: 'turboseek', name: 'TurboSeek', url: '/ai-search/turboseek', description: 'Access the full TurboSeek platform to enhance your research and learning.' },
@@ -29,40 +29,18 @@ const AISearch = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {tools.map((tool) =>
-              tool.id === 'exa' ? (
-                <a
-                  key={tool.id}
-                  href={tool.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col"
-                >
-                  <div className="h-40 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">Exa AI</div>
-                    <div className="absolute inset-0 bg-black/10"></div>
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-semibold mb-2">{tool.name}</h3>
-                    <p className="text-gray-600 mb-4">
-                      {tool.description}
-                    </p>
-                    <div className="mt-auto pt-4">
-                      <span className="inline-flex items-center text-school-seaBlue font-medium">
-                        Visit Website
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              ) : (
+            {tools.map((tool) => (
                 <Link
                   key={tool.id}
                   to={tool.url}
                   className="bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col"
                 >
+                  {tool.id === 'exa' && (
+                    <div className="h-40 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
+                      <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">Exa AI</div>
+                      <div className="absolute inset-0 bg-black/10"></div>
+                    </div>
+                  )}
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-semibold mb-2">{tool.name}</h3>
                     <p className="text-gray-600 mb-4">
@@ -78,8 +56,7 @@ const AISearch = () => {
                     </div>
                   </div>
                 </Link>
-              )
-            )}
+            ))}
           </div>
 
           <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
