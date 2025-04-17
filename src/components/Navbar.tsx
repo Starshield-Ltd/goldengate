@@ -67,6 +67,12 @@ const Navbar = () => {
           >
             Enroll Now
           </Link>
+          <Link
+            to="/apply-for-job"
+            className="ml-2 btn-primary text-xs md:text-sm"
+          >
+            Apply for Job
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -171,6 +177,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Enroll Now
+          </Link>
+          <Link
+            to="/apply-for-job"
+            className="mt-2 px-3 py-1.5 bg-gradient-to-r from-school-blue to-school-yellow text-white font-semibold rounded-md hover:opacity-90 transition-all duration-300 text-xs"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Apply for Job
           </Link>
         </nav>
       </div>

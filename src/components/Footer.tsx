@@ -135,6 +135,9 @@ const Footer = () => {
               <li>
                 <Link to="/enroll-now" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Enroll Now</Link>
               </li>
+              <li>
+                <Link to="/apply-for-job" className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm">Apply for Job</Link>
+              </li>
             </ul>
           </div>
 
@@ -173,6 +176,7 @@ const Footer = () => {
           <div className="flex items-center space-x-6 text-xs sm:text-sm text-white/80">
             <Link to="/privacy" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Terms of Service</Link>
+            <Link to="/apply-for-job" className="hover:text-school-yellow transition-all duration-300 hover:scale-105 transform">Careers</Link>
           </div>
         </div>
         <div className="overflow-hidden bg-gradient-to-r from-school-blue/90 to-school-blue/80 py-4 border-t border-school-yellow/30 backdrop-blur-sm">

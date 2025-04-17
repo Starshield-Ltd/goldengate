@@ -22,6 +22,7 @@ import Omniplex from "./pages/AISearchTools/Omniplex";
 import AndiSearch from "./pages/AISearchTools/AndiSearch";
 import ExaAI from "./pages/ExaAI";
 import EnrollNow from "./pages/EnrollNow";
+import ApplyForJob from "./pages/ApplyForJob";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/ai-search/andi-search" element={<AndiSearch />} />
           <Route path="/ai-search/exa-ai" element={<ExaAI />} />
           <Route path="/enroll-now" element={<EnrollNow />} />
+          <Route path="/apply-for-job" element={<ApplyForJob />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
