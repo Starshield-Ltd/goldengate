@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ImageWithLoader from './ImageWithLoader';
 import { ChevronDown, GraduationCap, BookOpen, Briefcase, Home, Info, Image, Phone } from 'lucide-react';
 
@@ -9,6 +9,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const resourcesDropdownRef = useRef<HTMLDivElement>(null);
   const actionsDropdownRef = useRef<HTMLDivElement>(null);
@@ -79,17 +82,31 @@ const Navbar = () => {
             <span>Home</span>
           </Link>
 
-          <a href="#about" className="nav-link text-xs md:text-sm flex items-center"
-            onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            <Info className="w-3.5 h-3.5 mr-1" />
-            <span>About</span>
-          </a>
+          {isHomePage ? (
+            <a href="#about" className="nav-link text-xs md:text-sm flex items-center"
+              onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Info className="w-3.5 h-3.5 mr-1" />
+              <span>About</span>
+            </a>
+          ) : (
+            <Link to="/#about" className="nav-link text-xs md:text-sm flex items-center">
+              <Info className="w-3.5 h-3.5 mr-1" />
+              <span>About</span>
+            </Link>
+          )}
 
-          <a href="#gallery" className="nav-link text-xs md:text-sm flex items-center"
-            onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            <Image className="w-3.5 h-3.5 mr-1" />
-            <span>Gallery</span>
-          </a>
+          {isHomePage ? (
+            <a href="#gallery" className="nav-link text-xs md:text-sm flex items-center"
+              onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Image className="w-3.5 h-3.5 mr-1" />
+              <span>Gallery</span>
+            </a>
+          ) : (
+            <Link to="/#gallery" className="nav-link text-xs md:text-sm flex items-center">
+              <Image className="w-3.5 h-3.5 mr-1" />
+              <span>Gallery</span>
+            </Link>
+          )}
 
           <Link to="/ghanaian-education" className="nav-link text-xs md:text-sm flex items-center">
             <GraduationCap className="w-3.5 h-3.5 mr-1" />
@@ -140,11 +157,18 @@ const Navbar = () => {
             )}
           </div>
 
-          <a href="#contact" className="nav-link text-xs md:text-sm flex items-center"
-            onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            <Phone className="w-3.5 h-3.5 mr-1" />
-            <span>Contact</span>
-          </a>
+          {isHomePage ? (
+            <a href="#contact" className="nav-link text-xs md:text-sm flex items-center"
+              onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Phone className="w-3.5 h-3.5 mr-1" />
+              <span>Contact</span>
+            </a>
+          ) : (
+            <Link to="/#contact" className="nav-link text-xs md:text-sm flex items-center">
+              <Phone className="w-3.5 h-3.5 mr-1" />
+              <span>Contact</span>
+            </Link>
+          )}
 
           {/* Actions Dropdown */}
           <div className="relative" ref={actionsDropdownRef}>
@@ -220,30 +244,53 @@ const Navbar = () => {
             <Home className="w-3.5 h-3.5 mr-2" />
             Home
           </Link>
-          <a
-            href="#about"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}
-          >
-            <Info className="w-3.5 h-3.5 mr-2" />
-            About
-          </a>
-          <a
-            href="#gallery"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}
-          >
-            <Image className="w-3.5 h-3.5 mr-2" />
-            Gallery
-          </a>
+          {isHomePage ? (
+            <a
+              href="#about"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                setIsMenuOpen(false);
+              }}
+            >
+              <Info className="w-3.5 h-3.5 mr-2" />
+              About
+            </a>
+          ) : (
+            <Link
+              to="/#about"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Info className="w-3.5 h-3.5 mr-2" />
+              About
+            </Link>
+          )}
+
+          {isHomePage ? (
+            <a
+              href="#gallery"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                setIsMenuOpen(false);
+              }}
+            >
+              <Image className="w-3.5 h-3.5 mr-2" />
+              Gallery
+            </a>
+          ) : (
+            <Link
+              to="/#gallery"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Image className="w-3.5 h-3.5 mr-2" />
+              Gallery
+            </Link>
+          )}
           <Link
             to="/ghanaian-education"
             className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
@@ -281,18 +328,29 @@ const Navbar = () => {
             AI Search
           </Link>
 
-          <a
-            href="#contact"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center mt-2"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsMenuOpen(false);
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            <Phone className="w-3.5 h-3.5 mr-2" />
-            Contact
-          </a>
+          {isHomePage ? (
+            <a
+              href="#contact"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center mt-2"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <Phone className="w-3.5 h-3.5 mr-2" />
+              Contact
+            </a>
+          ) : (
+            <Link
+              to="/#contact"
+              className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center mt-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Phone className="w-3.5 h-3.5 mr-2" />
+              Contact
+            </Link>
+          )}
 
           {/* Actions Section */}
           <div className="px-3 py-1.5 text-white/90 text-xs font-semibold border-t border-white/10 pt-3 mt-2">Quick Actions</div>
