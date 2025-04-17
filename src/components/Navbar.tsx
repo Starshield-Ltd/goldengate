@@ -1,20 +1,41 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 import ImageWithLoader from './ImageWithLoader';
+import { ChevronDown, GraduationCap, BookOpen, Briefcase, Home, Info, Image, Phone } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const resourcesDropdownRef = useRef<HTMLDivElement>(null);
+  const actionsDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        resourcesDropdownRef.current &&
+        !resourcesDropdownRef.current.contains(event.target as Node) &&
+        actionsDropdownRef.current &&
+        !actionsDropdownRef.current.contains(event.target as Node)
+      ) {
+        setActiveDropdown(null);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   return (
@@ -52,27 +73,115 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
-          <Link to="/" className="nav-link text-xs md:text-sm">Home</Link>
-          <a href="#about" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>About</a>
-          <a href="#gallery" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>Gallery</a>
-          <Link to="/ghanaian-education" className="nav-link text-xs md:text-sm">Education</Link>
-          <Link to="/stem-resources" className="nav-link text-xs md:text-sm">STEM Resources</Link>
-          <Link to="/golden-resources" className="nav-link text-xs md:text-sm">Golden Resources</Link>
-          <Link to="/ai-search" className="nav-link text-xs md:text-sm">AI Search</Link>
-          <a href="#contact" className="nav-link text-xs md:text-sm" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact</a>
-          <Link
-            to="/enroll-now"
-            className="ml-4 btn-secondary text-xs md:text-sm"
-          >
-            Enroll Now
+        <nav className="hidden md:flex items-center space-x-3">
+          <Link to="/" className="nav-link text-xs md:text-sm flex items-center">
+            <Home className="w-3.5 h-3.5 mr-1" />
+            <span>Home</span>
           </Link>
-          <Link
-            to="/apply-for-job"
-            className="ml-2 btn-primary text-xs md:text-sm"
-          >
-            Apply for Job
+
+          <a href="#about" className="nav-link text-xs md:text-sm flex items-center"
+            onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
+            <Info className="w-3.5 h-3.5 mr-1" />
+            <span>About</span>
+          </a>
+
+          <a href="#gallery" className="nav-link text-xs md:text-sm flex items-center"
+            onClick={(e) => { e.preventDefault(); document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }); }}>
+            <Image className="w-3.5 h-3.5 mr-1" />
+            <span>Gallery</span>
+          </a>
+
+          <Link to="/ghanaian-education" className="nav-link text-xs md:text-sm flex items-center">
+            <GraduationCap className="w-3.5 h-3.5 mr-1" />
+            <span>Education</span>
           </Link>
+
+          {/* Resources Dropdown */}
+          <div className="relative" ref={resourcesDropdownRef}>
+            <button
+              className={cn(
+                "nav-link text-xs md:text-sm flex items-center",
+                activeDropdown === 'resources' ? 'text-school-yellow' : ''
+              )}
+              onClick={() => setActiveDropdown(activeDropdown === 'resources' ? null : 'resources')}
+            >
+              <BookOpen className="w-3.5 h-3.5 mr-1" />
+              <span>Resources</span>
+              <ChevronDown className={cn(
+                "w-3.5 h-3.5 ml-1 transition-transform duration-200",
+                activeDropdown === 'resources' ? 'rotate-180' : ''
+              )} />
+            </button>
+
+            {activeDropdown === 'resources' && (
+              <div className="absolute top-full left-0 mt-1 w-48 bg-white/95 backdrop-blur-sm rounded-md shadow-lg py-2 z-50 border border-gray-200">
+                <Link
+                  to="/stem-resources"
+                  className="block px-4 py-2 text-xs text-gray-800 hover:bg-school-yellow/10 hover:text-school-blue transition-colors"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  STEM Resources
+                </Link>
+                <Link
+                  to="/golden-resources"
+                  className="block px-4 py-2 text-xs text-gray-800 hover:bg-school-yellow/10 hover:text-school-blue transition-colors"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  Golden Resources
+                </Link>
+                <Link
+                  to="/ai-search"
+                  className="block px-4 py-2 text-xs text-gray-800 hover:bg-school-yellow/10 hover:text-school-blue transition-colors"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  AI Search
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <a href="#contact" className="nav-link text-xs md:text-sm flex items-center"
+            onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+            <Phone className="w-3.5 h-3.5 mr-1" />
+            <span>Contact</span>
+          </a>
+
+          {/* Actions Dropdown */}
+          <div className="relative" ref={actionsDropdownRef}>
+            <button
+              className={cn(
+                "ml-2 px-3 py-1.5 rounded-md text-xs md:text-sm flex items-center bg-gradient-to-r from-school-blue to-school-yellow text-white hover:opacity-90 transition-all duration-300",
+                activeDropdown === 'actions' ? 'opacity-90' : ''
+              )}
+              onClick={() => setActiveDropdown(activeDropdown === 'actions' ? null : 'actions')}
+            >
+              <Briefcase className="w-3.5 h-3.5 mr-1" />
+              <span>Quick Actions</span>
+              <ChevronDown className={cn(
+                "w-3.5 h-3.5 ml-1 transition-transform duration-200",
+                activeDropdown === 'actions' ? 'rotate-180' : ''
+              )} />
+            </button>
+
+            {activeDropdown === 'actions' && (
+              <div className="absolute top-full right-0 mt-1 w-48 bg-white/95 backdrop-blur-sm rounded-md shadow-lg py-2 z-50 border border-gray-200">
+                <Link
+                  to="/enroll-now"
+                  className="block px-4 py-2 text-xs text-gray-800 hover:bg-school-yellow/10 hover:text-school-blue transition-colors font-medium"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  Enroll Now
+                </Link>
+                <Link
+                  to="/apply-for-job"
+                  className="block px-4 py-2 text-xs text-gray-800 hover:bg-school-yellow/10 hover:text-school-blue transition-colors font-medium"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  Apply for Job
+                </Link>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -100,89 +209,108 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div className={cn(
         "md:hidden absolute left-0 right-0 bg-gradient-to-r from-school-blue/95 to-school-yellow/95 backdrop-blur-lg shadow-lg transition-all duration-500 overflow-hidden",
-        isMenuOpen ? "max-h-96 border-b border-white/20" : "max-h-0"
+        isMenuOpen ? "max-h-[500px] border-b border-white/20" : "max-h-0"
       )}>
         <nav className="flex flex-col space-y-2 px-4 py-4">
           <Link
             to="/"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
+            <Home className="w-3.5 h-3.5 mr-2" />
             Home
           </Link>
           <a
             href="#about"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
               setIsMenuOpen(false);
             }}
           >
+            <Info className="w-3.5 h-3.5 mr-2" />
             About
           </a>
           <a
             href="#gallery"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
               setIsMenuOpen(false);
             }}
           >
+            <Image className="w-3.5 h-3.5 mr-2" />
             Gallery
           </a>
           <Link
             to="/ghanaian-education"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
+            <GraduationCap className="w-3.5 h-3.5 mr-2" />
             Education
           </Link>
+
+          {/* Resources Section */}
+          <div className="px-3 py-1.5 text-white/90 text-xs font-semibold border-t border-white/10 pt-3 mt-2">Resources</div>
+
           <Link
             to="/stem-resources"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center pl-5"
             onClick={() => setIsMenuOpen(false)}
           >
+            <div className="w-1.5 h-1.5 rounded-full bg-school-yellow mr-2"></div>
             STEM Resources
           </Link>
           <Link
             to="/golden-resources"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center pl-5"
             onClick={() => setIsMenuOpen(false)}
           >
+            <div className="w-1.5 h-1.5 rounded-full bg-school-yellow mr-2"></div>
             Golden Resources
           </Link>
           <Link
             to="/ai-search"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center pl-5"
             onClick={() => setIsMenuOpen(false)}
           >
+            <div className="w-1.5 h-1.5 rounded-full bg-school-yellow mr-2"></div>
             AI Search
           </Link>
+
           <a
             href="#contact"
-            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs"
+            className="px-3 py-1.5 text-white hover:bg-white/10 rounded-md transition-all duration-300 text-xs flex items-center mt-2"
             onClick={(e) => {
               e.preventDefault();
               setIsMenuOpen(false);
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
+            <Phone className="w-3.5 h-3.5 mr-2" />
             Contact
           </a>
+
+          {/* Actions Section */}
+          <div className="px-3 py-1.5 text-white/90 text-xs font-semibold border-t border-white/10 pt-3 mt-2">Quick Actions</div>
+
           <Link
             to="/enroll-now"
-            className="px-3 py-1.5 bg-white text-school-blue font-semibold rounded-md hover:bg-white/90 transition-all duration-300 text-xs"
+            className="px-3 py-1.5 bg-white text-school-blue font-semibold rounded-md hover:bg-white/90 transition-all duration-300 text-xs flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
+            <div className="w-1.5 h-1.5 rounded-full bg-school-blue mr-2"></div>
             Enroll Now
           </Link>
           <Link
             to="/apply-for-job"
-            className="mt-2 px-3 py-1.5 bg-gradient-to-r from-school-blue to-school-yellow text-white font-semibold rounded-md hover:opacity-90 transition-all duration-300 text-xs"
+            className="px-3 py-1.5 bg-gradient-to-r from-school-blue to-school-yellow text-white font-semibold rounded-md hover:opacity-90 transition-all duration-300 text-xs flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
+            <Briefcase className="w-3.5 h-3.5 mr-2" />
             Apply for Job
           </Link>
         </nav>
